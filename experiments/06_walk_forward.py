@@ -46,7 +46,7 @@ def main():
 
     controller = TrotController(
         gait_frequency=1.0,
-        step_length=0.04,
+        step_length=-0.06,# negative step length means moving forward
         step_height=0.03,
         nominal_height=-0.30,
     )
@@ -71,7 +71,16 @@ def main():
 
 
             data.ctrl[:] = command
-
+            robot_x = data.qpos[0]
+            robot_y = data.qpos[1]
+            robot_z = data.qpos[2]
+            if int(simulation_time / model.opt.timestep) % 500 == 0:
+                print(
+                    f"time={simulation_time:.2f}, "
+                    f"x={data.qpos[0]:.3f}, "
+                    f"y={data.qpos[1]:.3f}, "
+                    f"z={data.qpos[2]:.3f}"
+                )
 
             mujoco.mj_step(
                 model,
