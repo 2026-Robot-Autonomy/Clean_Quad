@@ -67,6 +67,20 @@ class TrotController:
         # -------------------------------------------------
         velocity_deadband=0.003,
         min_moving_speed=0.02,
+
+        # -------------------------------------------------
+        # GAIT CALIBRATION
+        # -------------------------------------------------
+        #
+        # vx [m/s] -> stride. The calibration belongs to the
+        # gait (frequency, step height); see gait_profiles.py.
+        # Defaults reproduce the original Stage-1 gait.
+        #
+        velocity_to_step_length=velocity_to_step_length,
+
+        # Base stride used when vx = 0 but wz != 0
+        # (rotation in place).
+        in_place_step_length=0.0,
     ):
 
         # =================================================
@@ -128,6 +142,15 @@ class TrotController:
 
         self.min_moving_speed = (
             min_moving_speed
+        )
+
+
+        self.velocity_to_step_length = (
+            velocity_to_step_length
+        )
+
+        self.in_place_step_length = (
+            in_place_step_length
         )
 
 
@@ -435,12 +458,14 @@ class TrotController:
         ):
 
             # Used for rotation-in-place.
-            base_step_length = 0.0
+            base_step_length = (
+                self.in_place_step_length
+            )
 
         else:
 
             base_step_length = (
-                velocity_to_step_length(
+                self.velocity_to_step_length(
                     self.vx_command
                 )
             )
