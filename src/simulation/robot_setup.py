@@ -52,6 +52,34 @@ def add_flat_ground(spec):
     return spec
 
 
+HEAD_CAMERA = "head_camera"
+
+HEAD_CAMERA_POS = (0.16, 0.0, 0.03)     # trunk frame [m], at the front face
+HEAD_CAMERA_TILT_DEG = 25.0             # pitched down from horizontal
+HEAD_CAMERA_FOVY_DEG = 70.0             # vertical field of view
+
+
+def add_head_camera(spec):
+    """
+    Forward-looking RGB-D camera on the trunk.
+
+    A MuJoCo camera looks along its -z axis with +y up in the
+    image. Image right = trunk -y; the view direction is trunk
+    +x pitched down by HEAD_CAMERA_TILT_DEG.
+    """
+
+    tilt = np.radians(HEAD_CAMERA_TILT_DEG)
+
+    spec.body("trunk").add_camera(
+        name=HEAD_CAMERA,
+        pos=list(HEAD_CAMERA_POS),
+        xyaxes=[0.0, -1.0, 0.0, np.sin(tilt), 0.0, np.cos(tilt)],
+        fovy=HEAD_CAMERA_FOVY_DEG,
+    )
+
+    return spec
+
+
 def build_flat_scene():
     """
     Compile A1 + flat ground from Python.

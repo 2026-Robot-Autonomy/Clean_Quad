@@ -131,7 +131,7 @@ def save_map(campus):
     path = FIGURE_DIR / "campus_map.png"
 
     fig, ax = plt.subplots(figsize=(10, 6.5))
-    plot_campus(ax, campus.layout, litter=campus.litter)
+    plot_campus(ax, campus.layout, litter=campus.litter, distractors=campus.distractors)
     ax.set_title(f"CleanQuad campus (seed {campus.seed})")
     fig.tight_layout()
     fig.savefig(path, dpi=150)

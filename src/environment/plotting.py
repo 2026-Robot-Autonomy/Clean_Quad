@@ -45,7 +45,14 @@ def add_rect(ax, rect, colour, **kwargs):
     ))
 
 
-def plot_campus(ax, layout, litter=None, path=None):
+DISTRACTOR_MARKERS = {
+    "leaf": ("$\u2618$", "#4d8c33"),
+    "stone": ("o", "#8c8c8c"),
+    "stick": ("_", "#5c3d1f"),
+}
+
+
+def plot_campus(ax, layout, litter=None, path=None, distractors=None):
 
     # Reverse so raised features (listed first) are drawn on top.
     # Hatched = no-go.
@@ -88,6 +95,15 @@ def plot_campus(ax, layout, litter=None, path=None):
                 ax.plot(
                     [p[0] for p in pts], [p[1] for p in pts],
                     marker=marker, color=colour, mec="black", ls="none", ms=7, label=kind,
+                )
+
+    if distractors:
+        for kind, (marker, colour) in DISTRACTOR_MARKERS.items():
+            pts = [o.position for o in distractors if o.kind == kind]
+            if pts:
+                ax.plot(
+                    [p[0] for p in pts], [p[1] for p in pts],
+                    marker=marker, color=colour, ls="none", ms=6, label=f"{kind} (not litter)",
                 )
 
     if path is not None:

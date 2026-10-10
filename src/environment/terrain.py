@@ -63,7 +63,11 @@ def add_terrain_box(spec, name, rect, top, friction, rgba):
 # ELEMENTS
 # =========================================================
 
-def add_sky_and_light(spec):
+def add_sky_and_light(spec, sun_dir=(-0.3, -0.2, -1.0), brightness=0.8):
+    """
+    Sky texture and one directional sun. Perception data varies
+    sun_dir and brightness per scene.
+    """
 
     spec.add_texture(
         name="sky",
@@ -78,9 +82,9 @@ def add_sky_and_light(spec):
     spec.worldbody.add_light(
         name="sun",
         pos=[4.0, 3.0, 6.0],
-        dir=[-0.3, -0.2, -1.0],
+        dir=list(sun_dir),
         type=mujoco.mjtLightType.mjLIGHT_DIRECTIONAL,
-        diffuse=[0.8, 0.8, 0.8],
+        diffuse=[brightness] * 3,
         castshadow=True,
     )
 
@@ -153,9 +157,9 @@ def add_stairs(spec, stairs):
         )
 
 
-def add_terrain(spec, layout):
+def add_terrain(spec, layout, sun_dir=(-0.3, -0.2, -1.0), brightness=0.8):
 
-    add_sky_and_light(spec)
+    add_sky_and_light(spec, sun_dir, brightness)
     add_underfloor(spec)
 
     for surface in layout.surfaces:

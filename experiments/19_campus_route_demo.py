@@ -37,36 +37,18 @@ sys.path.append(
 )
 
 
-from src.controllers.locomotion_interface import LocomotionInterface, wrap_angle
+from src.controllers.locomotion_interface import LocomotionInterface
+from src.navigation.waypoint_follower import DEMO_ROUTE, HeadingFollower, reached as at_waypoint
 from src.environment import build_campus
 from src.environment.plotting import plot_campus
 from src.utils.orientation import quaternion_to_euler
 
 
 # ============================================================
-# ROUTE
+# SETTINGS
 # ============================================================
 
-WAYPOINTS = [
-    (3.3, 1.0),     # east along the road
-    (4.0, 2.6),     # up the ramp onto the pavement
-    (4.4, 4.4),     # grass, east of the planter
-    (2.0, 4.8),     # north of the planter
-    (1.0, 3.6),     # grass, west
-    (2.6, 2.7),     # pavement
-    (3.4, 2.7),     # line up above the ramp
-    (4.0, 1.1),     # down the ramp
-    (0.8, 1.0),     # home
-]
-
-REACHED_DISTANCE = 0.25
-
-VX = 0.30
-WZ = 0.50
-
-# Hysteresis on heading error [rad]
-START_TURN = math.radians(8.0)
-STOP_TURN = math.radians(3.0)
+WAYPOINTS = DEMO_ROUTE
 
 MAX_TIME_PER_METRE = 10.0       # generous: nominal is ~3.3 s per metre
 
@@ -77,28 +59,6 @@ FALL_ANGLE_DEG = 30.0
 
 LOG_DIR = PROJECT_ROOT / "results" / "logs" / "campus_route"
 FIGURE_DIR = PROJECT_ROOT / "results" / "figures"
-
-
-# ============================================================
-# HEADING FOLLOWER
-# ============================================================
-
-class HeadingFollower:
-    """Bang-bang steering towards a point, with hysteresis."""
-
-    def __init__(self):
-        self.wz = 0.0
-
-    def command(self, x, y, yaw, target):
-
-        error = wrap_angle(math.atan2(target[1] - y, target[0] - x) - yaw)
-
-        if self.wz == 0.0 and abs(error) > START_TURN:
-            self.wz = math.copysign(WZ, error)
-        elif self.wz != 0.0 and (abs(error) < STOP_TURN or error * self.wz < 0.0):
-            self.wz = 0.0
-
-        return VX, self.wz
 
 
 # ============================================================
@@ -130,7 +90,7 @@ def run_route(campus, viewer=None, speed=1.0):
 
             x, y, yaw = campus.robot_pose()
 
-            if math.dist((x, y), target) < REACHED_DISTANCE:
+            if at_waypoint(x, y, target):
                 done = True
                 break
 

@@ -2,6 +2,8 @@
 build_campus(): the single entry point for the Stage-2 world.
 """
 
+import math
+
 import numpy as np
 import mujoco
 
@@ -13,7 +15,8 @@ from src.environment.litter import (
     add_litter,
     place_litter,
 )
-from src.simulation.robot_setup import load_a1_spec, reset_robot
+from src.environment.distractors import add_distractors, place_distractors
+from src.simulation.robot_setup import add_head_camera, load_a1_spec, reset_robot
 from src.utils.orientation import quaternion_to_euler
 
 
@@ -21,18 +24,22 @@ class Campus:
     """
     The compiled world plus its ground-truth description.
 
-    model, data   MuJoCo
+    model, data   MuJoCo (robot has a "head_camera")
     layout        CampusLayout (zones, heights, obstacles, bins)
-    litter        list of LitterItem
+    litter        list of GroundObject, the targets
+    distractors   list of GroundObject that are not litter
+    lighting      (sun_dir, brightness)
     """
 
-    def __init__(self, spec, model, layout, litter, seed):
+    def __init__(self, spec, model, layout, litter, distractors, lighting, seed):
 
         self.spec = spec
         self.model = model
         self.data = mujoco.MjData(model)
         self.layout = layout
         self.litter = litter
+        self.distractors = distractors
+        self.lighting = lighting
         self.seed = seed
 
         self._mocap_id = {
@@ -92,18 +99,47 @@ class Campus:
         return float(self.data.qpos[0]), float(self.data.qpos[1]), float(yaw)
 
 
-def build_campus(seed=0, layout=None, litter_count=8):
+def random_lighting(rng):
+    """Sun from a random azimuth, 35-80 deg above the horizon."""
+
+    azimuth = rng.uniform(0.0, 2.0 * math.pi)
+    elevation = math.radians(rng.uniform(35.0, 80.0))
+
+    sun_dir = (
+        -math.cos(elevation) * math.cos(azimuth),
+        -math.cos(elevation) * math.sin(azimuth),
+        -math.sin(elevation),
+    )
+
+    return sun_dir, rng.uniform(0.55, 1.0)
+
+
+def build_campus(
+    seed=0,
+    layout=None,
+    litter_count=8,
+    distractor_count=10,
+    vary_lighting=True,
+):
+    """
+    Everything random (litter, distractors, lighting) comes
+    from `seed`, so a seed always gives the same scene.
+    """
 
     layout = layout or default_layout()
     rng = np.random.default_rng(seed)
 
+    litter = place_litter(layout, rng, count=litter_count)
+    distractors = place_distractors(layout, rng, count=distractor_count, existing=litter)
+    lighting = random_lighting(rng) if vary_lighting else ((-0.3, -0.2, -1.0), 0.8)
+
     spec = load_a1_spec()
     spec.modelname = "cleanquad_campus"
 
-    add_terrain(spec, layout)
+    add_head_camera(spec)
+    add_terrain(spec, layout, *lighting)
     add_objects(spec, layout)
-
-    litter = place_litter(layout, rng, count=litter_count)
     add_litter(spec, litter)
+    add_distractors(spec, distractors)
 
-    return Campus(spec, spec.compile(), layout, litter, seed)
+    return Campus(spec, spec.compile(), layout, litter, distractors, lighting, seed)

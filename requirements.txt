@@ -1,3 +1,10 @@
 mujoco
 numpy
 matplotlib
+
+# Stage 3 perception
+scipy
+pillow
+torch
+torchvision
+ultralytics

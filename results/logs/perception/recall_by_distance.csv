@@ -1,0 +1,7 @@
+detector,distance_bin,recall,n
+YOLOv8n (CNN),< 1 m,0.958041958041958,286
+YOLOv8n (CNN),1-2 m,0.9803536345776032,509
+YOLOv8n (CNN),> 2 m,0.9193548387096774,1302
+colour baseline,< 1 m,0.6328671328671329,286
+colour baseline,1-2 m,0.4577603143418468,509
+colour baseline,> 2 m,0.3579109062980031,1302

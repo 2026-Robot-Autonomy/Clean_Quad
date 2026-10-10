@@ -1,0 +1,9 @@
+path: /home/pinaka/Documents/Courses/Robot/Robot-Autonomy/data/litter_dataset
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: bottle
+  1: can
+  2: cup
+  3: wrapper
