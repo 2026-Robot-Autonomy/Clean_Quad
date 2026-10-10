@@ -1,0 +1,3 @@
+seed,detector,method,route_completed,visible_items,mapped_items,confirmed_tracks,observation_mean_cm,observation_p95_cm,map_mean_cm,map_p95_cm,map_max_cm,duplicate_rate,missed_item_rate,false_positives,stage4_passed
+0,YOLOv8n (CNN),depth,True,8,8,8,3.862655979813379,6.527802402010401,3.3584948832257724,4.891005231320978,4.916374522129454,0.0,0.0,0,True
+0,YOLOv8n (CNN),ground_plane,True,8,7,19,28.590347582270756,94.53576115107165,10.109949294111832,19.037620416509288,19.69682204537337,0.0,0.125,12,False

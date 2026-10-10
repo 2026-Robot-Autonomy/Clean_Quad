@@ -1,0 +1,83 @@
+{
+  "per_observation": {
+    "n": 577,
+    "mean_error_cm": 3.862655979813379,
+    "p95_error_cm": 6.527802402010401,
+    "max_error_cm": 11.952825094316214,
+    "mean_xy_error_cm": 3.8165200272585262
+  },
+  "by_distance": {
+    "<1m": {
+      "n": 62,
+      "mean_error_cm": 2.9425468357941695,
+      "p95_error_cm": 5.41439685328337,
+      "max_error_cm": 6.582070852425437,
+      "mean_xy_error_cm": 2.7893858011218122
+    },
+    "1-2m": {
+      "n": 123,
+      "mean_error_cm": 3.7229982744800667,
+      "p95_error_cm": 5.818469289557667,
+      "max_error_cm": 11.952825094316214,
+      "mean_xy_error_cm": 3.6640981689575725
+    },
+    ">=2m": {
+      "n": 392,
+      "mean_error_cm": 4.052004614214369,
+      "p95_error_cm": 6.739877988888836,
+      "max_error_cm": 8.841259875739112,
+      "mean_xy_error_cm": 4.0268011767266225
+    }
+  },
+  "detector_true_positives": 578,
+  "localized_true_positives": 577,
+  "localization_acceptance_rate": 0.9982698961937716,
+  "map": {
+    "n": 8,
+    "mean_error_cm": 3.3584948832257724,
+    "p95_error_cm": 4.891005231320978,
+    "max_error_cm": 4.916374522129454,
+    "mean_xy_error_cm": 3.3092792998978187,
+    "total_items": 8,
+    "visible_items": 8,
+    "not_visible_items": 0,
+    "matched_items": 8,
+    "confirmed_tracks": 8,
+    "duplicates": 0,
+    "duplicate_rate": 0.0,
+    "false_positives": 0,
+    "missed_items": 0,
+    "missed_item_rate": 0.0,
+    "missed_names": [],
+    "visible_names": [
+      "litter_bottle_00",
+      "litter_bottle_04",
+      "litter_can_01",
+      "litter_can_05",
+      "litter_cup_02",
+      "litter_cup_06",
+      "litter_wrapper_03",
+      "litter_wrapper_07"
+    ],
+    "match_radius_m": 0.25,
+    "target_error_cm": 10.0,
+    "passed": true
+  },
+  "rejected": {
+    "duplicate_box": 3
+  },
+  "route": {
+    "seed": 0,
+    "waypoints_reached": 9,
+    "waypoints_total": 9,
+    "completed": true,
+    "fall": false,
+    "simulation_seconds": 63.41200000003153,
+    "frames": 318,
+    "wall_seconds": 226.453721556,
+    "detector_seconds": 41.29527345100004,
+    "camera_rate_hz": 5.0,
+    "viewer_enabled": false
+  },
+  "stage4_passed": true
+}

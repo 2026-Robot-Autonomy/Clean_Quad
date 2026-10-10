@@ -1,0 +1,86 @@
+{
+  "per_observation": {
+    "n": 575,
+    "mean_error_cm": 28.590347582270756,
+    "p95_error_cm": 94.53576115107165,
+    "max_error_cm": 153.46772246719905,
+    "mean_xy_error_cm": 27.09331321893859
+  },
+  "by_distance": {
+    "<1m": {
+      "n": 62,
+      "mean_error_cm": 11.228308672159551,
+      "p95_error_cm": 18.167605279152166,
+      "max_error_cm": 19.216707893470822,
+      "mean_xy_error_cm": 8.140564426979799
+    },
+    "1-2m": {
+      "n": 123,
+      "mean_error_cm": 19.343078321459984,
+      "p95_error_cm": 35.68284118924144,
+      "max_error_cm": 39.51211290354837,
+      "mean_xy_error_cm": 17.56079273271909
+    },
+    ">=2m": {
+      "n": 390,
+      "mean_error_cm": 34.26691304767235,
+      "p95_error_cm": 109.70021031897335,
+      "max_error_cm": 153.46772246719905,
+      "mean_xy_error_cm": 33.1127246161346
+    }
+  },
+  "detector_true_positives": 578,
+  "localized_true_positives": 575,
+  "localization_acceptance_rate": 0.9948096885813149,
+  "map": {
+    "n": 7,
+    "mean_error_cm": 10.109949294111832,
+    "p95_error_cm": 19.037620416509288,
+    "max_error_cm": 19.69682204537337,
+    "mean_xy_error_cm": 6.9922227429391475,
+    "total_items": 8,
+    "visible_items": 8,
+    "not_visible_items": 0,
+    "matched_items": 7,
+    "confirmed_tracks": 19,
+    "duplicates": 0,
+    "duplicate_rate": 0.0,
+    "false_positives": 12,
+    "missed_items": 1,
+    "missed_item_rate": 0.125,
+    "missed_names": [
+      "litter_bottle_04"
+    ],
+    "visible_names": [
+      "litter_bottle_00",
+      "litter_bottle_04",
+      "litter_can_01",
+      "litter_can_05",
+      "litter_cup_02",
+      "litter_cup_06",
+      "litter_wrapper_03",
+      "litter_wrapper_07"
+    ],
+    "match_radius_m": 0.25,
+    "target_error_cm": 10.0,
+    "passed": false
+  },
+  "rejected": {
+    "extent": 2,
+    "duplicate_box": 3
+  },
+  "route": {
+    "seed": 0,
+    "waypoints_reached": 9,
+    "waypoints_total": 9,
+    "completed": true,
+    "fall": false,
+    "simulation_seconds": 63.41200000003153,
+    "frames": 318,
+    "wall_seconds": 226.453721556,
+    "detector_seconds": 41.29527345100004,
+    "camera_rate_hz": 5.0,
+    "viewer_enabled": false
+  },
+  "stage4_passed": false
+}

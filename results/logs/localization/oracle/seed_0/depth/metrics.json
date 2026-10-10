@@ -1,0 +1,78 @@
+{
+  "per_observation": {
+    "n": 594,
+    "mean_error_cm": 3.952086542394319,
+    "p95_error_cm": 6.547636261787087,
+    "max_error_cm": 12.008327711906833,
+    "mean_xy_error_cm": 3.9136118707104375
+  },
+  "by_distance": {
+    "<1m": {
+      "n": 64,
+      "mean_error_cm": 3.0398706423096367,
+      "p95_error_cm": 5.416821320225757,
+      "max_error_cm": 7.179613577278884,
+      "mean_xy_error_cm": 2.8938701551211654
+    },
+    "1-2m": {
+      "n": 123,
+      "mean_error_cm": 3.8299068623128383,
+      "p95_error_cm": 5.721592950903207,
+      "max_error_cm": 12.008327711906833,
+      "mean_xy_error_cm": 3.777357218649798
+    },
+    ">=2m": {
+      "n": 407,
+      "mean_error_cm": 4.1324548919162885,
+      "p95_error_cm": 6.601395922397421,
+      "max_error_cm": 9.49424022287352,
+      "mean_xy_error_cm": 4.11514207218752
+    }
+  },
+  "detector_true_positives": 594,
+  "localized_true_positives": 594,
+  "localization_acceptance_rate": 1.0,
+  "map": {
+    "n": 8,
+    "mean_error_cm": 3.404973448828211,
+    "p95_error_cm": 4.967615196122384,
+    "max_error_cm": 5.043601764150525,
+    "mean_xy_error_cm": 3.3656415484012383,
+    "visible_items": 8,
+    "matched_items": 8,
+    "confirmed_tracks": 8,
+    "duplicates": 0,
+    "duplicate_rate": 0.0,
+    "false_positives": 0,
+    "missed_items": 0,
+    "missed_item_rate": 0.0,
+    "missed_names": [],
+    "visible_names": [
+      "litter_bottle_00",
+      "litter_bottle_04",
+      "litter_can_01",
+      "litter_can_05",
+      "litter_cup_02",
+      "litter_cup_06",
+      "litter_wrapper_03",
+      "litter_wrapper_07"
+    ],
+    "match_radius_m": 0.25,
+    "target_error_cm": 10.0,
+    "passed": true
+  },
+  "rejected": {},
+  "route": {
+    "seed": 0,
+    "waypoints_reached": 9,
+    "waypoints_total": 9,
+    "completed": true,
+    "fall": false,
+    "simulation_seconds": 63.41200000003153,
+    "frames": 318,
+    "wall_seconds": 357.773973298,
+    "detector_seconds": 0.0038415909999116593,
+    "camera_rate_hz": 5.0
+  },
+  "stage4_passed": true
+}

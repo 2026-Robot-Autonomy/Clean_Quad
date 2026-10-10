@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "units": "metres",
+  "frame": "world_x_east_y_north_z_up",
+  "seed": 0,
+  "detector": "oracle_boxes_diagnostic",
+  "method": "depth",
+  "config": {
+    "min_score": 0.25,
+    "min_depth": 0.05,
+    "max_range": 8.0,
+    "min_depth_pixels": 9,
+    "depth_crop": 0.6,
+    "max_extent": 0.35,
+    "ground_z": 0.0
+  },
+  "association_radius_m": 0.2,
+  "min_observations": 3,
+  "tracks": [
+    {
+      "track_id": 1,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.066791505494607,
+        1.6190122455748153,
+        0.03151198752938512
+      ],
+      "position_std": [
+        0.0065828839504389475,
+        0.011078756235664268,
+        0.0019583103468582747
+      ],
+      "observations": 104,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.002,
+      "last_seen": 48.20000000001294
+    },
+    {
+      "track_id": 2,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.442898938078653,
+        3.878243862873171,
+        0.1010528860891142
+      ],
+      "position_std": [
+        0.028846346942018115,
+        0.011439419876279631,
+        0.0025828085911575884
+      ],
+      "observations": 115,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.002,
+      "last_seen": 46.2000000000105
+    },
+    {
+      "track_id": 3,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        6.246515999896489,
+        1.4384426122958804,
+        0.041392726799077934
+      ],
+      "position_std": [
+        0.009070072892077442,
+        0.011889367361050826,
+        0.0024847400545287878
+      ],
+      "observations": 100,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.002,
+      "last_seen": 48.0000000000127
+    },
+    {
+      "track_id": 4,
+      "class_id": 3,
+      "class": "wrapper",
+      "position": [
+        1.5956425262696334,
+        0.5565765347356473,
+        0.007430768553203412
+      ],
+      "position_std": [
+        0.016289817124262803,
+        0.01542023846154431,
+        0.0011367123894178682
+      ],
+      "observations": 65,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.002,
+      "last_seen": 60.20000000002761
+    },
+    {
+      "track_id": 5,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        4.83979021196694,
+        4.352298545340839,
+        0.12453217691011924
+      ],
+      "position_std": [
+        0.005773105920504316,
+        0.005305385780233782,
+        0.003327243281439685
+      ],
+      "observations": 78,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.20000000000000015,
+      "last_seen": 44.20000000000805
+    },
+    {
+      "track_id": 6,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        1.44707292124729,
+        5.1683030668838335,
+        0.11345229099934626
+      ],
+      "position_std": [
+        0.0063649525858623076,
+        0.007208534970863993,
+        0.004230744898345809
+      ],
+      "observations": 39,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 23.601999999997798,
+      "last_seen": 31.201999999993586
+    },
+    {
+      "track_id": 7,
+      "class_id": 3,
+      "class": "wrapper",
+      "position": [
+        1.0093847690135707,
+        4.031033825691835,
+        0.0674606912302334
+      ],
+      "position_std": [
+        0.00789051429365384,
+        0.005323484445943492,
+        0.0009803136059266238
+      ],
+      "observations": 52,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 24.601999999997243,
+      "last_seen": 34.80199999999657
+    },
+    {
+      "track_id": 8,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        1.2038007270344386,
+        2.7416588468636642,
+        0.12006693834691015
+      ],
+      "position_std": [
+        0.022344551328723487,
+        0.02813158121823018,
+        0.007758583097784366
+      ],
+      "observations": 41,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 31.601999999993364,
+      "last_seen": 55.80000000002223
+    }
+  ]
+}

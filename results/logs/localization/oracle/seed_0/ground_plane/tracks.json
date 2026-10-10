@@ -1,0 +1,401 @@
+{
+  "schema_version": 1,
+  "units": "metres",
+  "frame": "world_x_east_y_north_z_up",
+  "seed": 0,
+  "detector": "oracle_boxes_diagnostic",
+  "method": "ground_plane",
+  "config": {
+    "min_score": 0.25,
+    "min_depth": 0.05,
+    "max_range": 8.0,
+    "min_depth_pixels": 9,
+    "depth_crop": 0.6,
+    "max_extent": 0.35,
+    "ground_z": 0.0
+  },
+  "association_radius_m": 0.2,
+  "min_observations": 3,
+  "tracks": [
+    {
+      "track_id": 1,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.0805611026475495,
+        1.617472955302872,
+        -1.0675221390626508e-18
+      ],
+      "position_std": [
+        0.0324802313031954,
+        0.011873961526055252,
+        1.3290543449960164e-17
+      ],
+      "observations": 104,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.002,
+      "last_seen": 48.20000000001294
+    },
+    {
+      "track_id": 2,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        6.588938592711724,
+        4.634891817326825,
+        0.0
+      ],
+      "position_std": [
+        0.03981798320964162,
+        0.022701319121879966,
+        0.0
+      ],
+      "observations": 4,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.002,
+      "last_seen": 1.400000000000001
+    },
+    {
+      "track_id": 3,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        6.3070049493633284,
+        1.432698705233477,
+        5.551115123125784e-19
+      ],
+      "position_std": [
+        0.0548211115756002,
+        0.013791042236677216,
+        1.6644090939449353e-17
+      ],
+      "observations": 100,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.002,
+      "last_seen": 48.0000000000127
+    },
+    {
+      "track_id": 4,
+      "class_id": 3,
+      "class": "wrapper",
+      "position": [
+        1.6136039787566578,
+        0.5805369290610121,
+        1.481484572605566e-34
+      ],
+      "position_std": [
+        0.054965676626565416,
+        0.030927023088901225,
+        1.6865498449208927e-17
+      ],
+      "observations": 65,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.002,
+      "last_seen": 60.20000000002761
+    },
+    {
+      "track_id": 5,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        5.77001694649342,
+        5.199843616339201,
+        0.0
+      ],
+      "position_std": [
+        0.05667907300233929,
+        0.047114571508461406,
+        0.0
+      ],
+      "observations": 6,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.20000000000000015,
+      "last_seen": 1.8000000000000014
+    },
+    {
+      "track_id": 6,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        6.374934879584694,
+        4.549369455301438,
+        0.0
+      ],
+      "position_std": [
+        0.07217078535114357,
+        0.03377275796688548,
+        1.904016779158511e-17
+      ],
+      "observations": 17,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 0.20000000000000015,
+      "last_seen": 4.001999999999781
+    },
+    {
+      "track_id": 7,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        6.206476928589152,
+        4.50642799522879,
+        0.0
+      ],
+      "position_std": [
+        0.04863295385538131,
+        0.02725952873981371,
+        0.0
+      ],
+      "observations": 6,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 4.201999999999759,
+      "last_seen": 6.001999999999561
+    },
+    {
+      "track_id": 9,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.808352592650894,
+        4.290622541887675,
+        -2.775557561562891e-18
+      ],
+      "position_std": [
+        0.040603664082682574,
+        0.09727912267632995,
+        1.2098374922832814e-17
+      ],
+      "observations": 40,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 9.001999999999676,
+      "last_seen": 17.000000000001457
+    },
+    {
+      "track_id": 10,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        5.072412955658545,
+        4.91454666509325,
+        1.7906822977825105e-18
+      ],
+      "position_std": [
+        0.04437884220846155,
+        0.11586323922401146,
+        9.807970878206641e-18
+      ],
+      "observations": 31,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 9.40199999999981,
+      "last_seen": 15.400000000001812
+    },
+    {
+      "track_id": 11,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        4.971029477211234,
+        4.556980273256786,
+        -5.3720468933475315e-18
+      ],
+      "position_std": [
+        0.026834986464859146,
+        0.10176320619045752,
+        2.582558737088207e-17
+      ],
+      "observations": 31,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 15.600000000001879,
+      "last_seen": 21.601999999998906
+    },
+    {
+      "track_id": 12,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.722431608488217,
+        4.080872520693937,
+        -3.965082230804131e-18
+      ],
+      "position_std": [
+        0.08265946431107224,
+        0.008831285011913425,
+        2.5388914135476237e-17
+      ],
+      "observations": 14,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 17.200000000001346,
+      "last_seen": 46.2000000000105
+    },
+    {
+      "track_id": 13,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        1.0770592542894237,
+        5.251477798505327,
+        2.861381631661036e-34
+      ],
+      "position_std": [
+        0.10794168057815777,
+        0.0059464249084388325,
+        1.3269703217737501e-17
+      ],
+      "observations": 35,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 23.601999999997798,
+      "last_seen": 30.40199999999403
+    },
+    {
+      "track_id": 14,
+      "class_id": 3,
+      "class": "wrapper",
+      "position": [
+        0.7620044331024997,
+        3.92726227181132,
+        -1.206764157201257e-18
+      ],
+      "position_std": [
+        0.13022820700556814,
+        0.03028369505092572,
+        1.4124812323053197e-17
+      ],
+      "observations": 46,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 24.601999999997243,
+      "last_seen": 33.6019999999951
+    },
+    {
+      "track_id": 15,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        1.294550501765559,
+        5.243162070039215,
+        0.0
+      ],
+      "position_std": [
+        0.013784352299580192,
+        0.028637794068771826,
+        0.0
+      ],
+      "observations": 4,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 30.601999999993918,
+      "last_seen": 31.201999999993586
+    },
+    {
+      "track_id": 16,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        1.1871699587487021,
+        2.532261977639686,
+        -1.5003013846285896e-18
+      ],
+      "position_std": [
+        0.04343356082603964,
+        0.09693681878821259,
+        2.035107812938168e-17
+      ],
+      "observations": 37,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 31.601999999993364,
+      "last_seen": 38.800000000001454
+    },
+    {
+      "track_id": 17,
+      "class_id": 3,
+      "class": "wrapper",
+      "position": [
+        0.9640435553327191,
+        4.028899166630835,
+        -9.251858538542972e-18
+      ],
+      "position_std": [
+        0.011635594607499989,
+        0.011908925541363313,
+        3.814638998768531e-17
+      ],
+      "observations": 6,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 33.801999999995346,
+      "last_seen": 34.80199999999657
+    },
+    {
+      "track_id": 18,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.985889271591666,
+        4.089418761745099,
+        -1.982541115402065e-18
+      ],
+      "position_std": [
+        0.09121727309328907,
+        0.01210447207748503,
+        1.0301585819911948e-17
+      ],
+      "observations": 28,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 39.40000000000219,
+      "last_seen": 44.80000000000879
+    },
+    {
+      "track_id": 19,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        5.307781229668284,
+        4.669524119542292,
+        -1.1102230246251566e-17
+      ],
+      "position_std": [
+        0.09855986399526304,
+        0.025508544935554798,
+        2.2204460492503132e-17
+      ],
+      "observations": 10,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 39.800000000002676,
+      "last_seen": 44.20000000000805
+    },
+    {
+      "track_id": 20,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        0.7403884209372837,
+        3.1576998892502512,
+        0.0
+      ],
+      "position_std": [
+        0.02769882006151456,
+        0.0298687294524326,
+        0.0
+      ],
+      "observations": 4,
+      "mean_score": 1.0,
+      "max_score": 1.0,
+      "first_seen": 55.2000000000215,
+      "last_seen": 55.80000000002223
+    }
+  ]
+}

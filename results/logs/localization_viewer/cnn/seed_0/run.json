@@ -1,0 +1,56 @@
+{
+  "seed": 0,
+  "detector": "YOLOv8n (CNN)",
+  "device": "cpu",
+  "oracle_boxes_diagnostic": false,
+  "model": "models/litter_yolov8n.pt",
+  "model_sha256": "cf611589fb7faf97f49b96bf152beb7b3db985ec7effe03a85f672b285ab6301",
+  "config": {
+    "min_score": 0.38000000000000006,
+    "min_depth": 0.05,
+    "max_range": 8.0,
+    "min_depth_pixels": 9,
+    "depth_crop": 0.6,
+    "max_extent": 0.35,
+    "ground_z": 0.0
+  },
+  "versions": {
+    "python": "3.13.15",
+    "numpy": "2.5.3",
+    "mujoco": "3.14.0",
+    "matplotlib": "3.11.2",
+    "scipy": "1.18.1",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "ultralytics": "8.4.175"
+  },
+  "route": {
+    "seed": 0,
+    "waypoints_reached": 9,
+    "waypoints_total": 9,
+    "completed": true,
+    "fall": false,
+    "simulation_seconds": 63.41200000003153,
+    "frames": 318,
+    "wall_seconds": 408.32371943499993,
+    "detector_seconds": 115.5499373190001,
+    "camera_rate_hz": 5.0,
+    "viewer_enabled": true
+  },
+  "methods": {
+    "depth": {
+      "association_radius_m": 0.2,
+      "class_switch_radius_m": 0.08,
+      "association_window_s": 1.0,
+      "confirmation": "winning_class_frames",
+      "min_observations": 3
+    },
+    "ground_plane": {
+      "association_radius_m": 0.2,
+      "class_switch_radius_m": 0.08,
+      "association_window_s": 1.0,
+      "confirmation": "winning_class_frames",
+      "min_observations": 3
+    }
+  }
+}

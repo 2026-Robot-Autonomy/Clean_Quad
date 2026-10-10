@@ -1,0 +1,503 @@
+{
+  "schema_version": 1,
+  "units": "metres",
+  "frame": "mujoco_world_xyz_z_up",
+  "seed": 0,
+  "detector": "YOLOv8n (CNN)",
+  "method": "ground_plane",
+  "config": {
+    "min_score": 0.38000000000000006,
+    "min_depth": 0.05,
+    "max_range": 8.0,
+    "min_depth_pixels": 9,
+    "depth_crop": 0.6,
+    "max_extent": 0.35,
+    "ground_z": 0.0
+  },
+  "association_radius_m": 0.2,
+  "class_switch_radius_m": 0.08,
+  "association_window_s": 1.0,
+  "confirmation": "winning_class_frames",
+  "min_observations": 3,
+  "tracks": [
+    {
+      "track_id": 1,
+      "class_id": 3,
+      "class": "wrapper",
+      "position": [
+        1.612843634137551,
+        0.5741137935472075,
+        1.4484735621279197e-18
+      ],
+      "position_std": [
+        0.052169962006249716,
+        0.028880416414167512,
+        1.3420100018260899e-17
+      ],
+      "observations": 63,
+      "mean_score": 0.8226982487572564,
+      "class_observations": 63,
+      "max_score": 0.9794432520866394,
+      "first_seen": 0.002,
+      "last_seen": 60.00000000002736,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "wrapper": 51.82998967170715
+      }
+    },
+    {
+      "track_id": 3,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.096440966639537,
+        1.6173831367756815,
+        5.869045930627368e-19
+      ],
+      "position_std": [
+        0.04198009625905359,
+        0.012380708075778872,
+        9.596724210732789e-18
+      ],
+      "observations": 104,
+      "mean_score": 0.8736659723978776,
+      "class_observations": 104,
+      "max_score": 0.9460576176643372,
+      "first_seen": 0.002,
+      "last_seen": 48.20000000001294,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "bottle": 90.86126112937927
+      }
+    },
+    {
+      "track_id": 4,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        5.6950441430280865,
+        5.133416121347012,
+        -2.360412387675893e-17
+      ],
+      "position_std": [
+        0.01879173285152747,
+        0.004216433508166689,
+        5.024274322755672e-17
+      ],
+      "observations": 3,
+      "mean_score": 0.8445690274238586,
+      "class_observations": 3,
+      "max_score": 0.910957932472229,
+      "first_seen": 0.20000000000000015,
+      "last_seen": 1.8000000000000014,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "can": 2.533707082271576
+      }
+    },
+    {
+      "track_id": 5,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        6.434752860517698,
+        4.57660398645433,
+        1.669614111297752e-19
+      ],
+      "position_std": [
+        0.0945990292318668,
+        0.02751769570688745,
+        1.824032101723983e-17
+      ],
+      "observations": 19,
+      "mean_score": 0.8533491304046229,
+      "class_observations": 19,
+      "max_score": 0.8997520804405212,
+      "first_seen": 0.20000000000000015,
+      "last_seen": 3.801999999999803,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "bottle": 16.213633477687836
+      }
+    },
+    {
+      "track_id": 6,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        6.3205708200816595,
+        1.4321634565123353,
+        3.008574499824886e-18
+      ],
+      "position_std": [
+        0.047413886703746404,
+        0.013130782655549266,
+        1.4919141344939655e-17
+      ],
+      "observations": 94,
+      "mean_score": 0.7920379204318878,
+      "class_observations": 89,
+      "max_score": 0.930601954460144,
+      "first_seen": 0.4000000000000003,
+      "last_seen": 48.0000000000127,
+      "class_confidence": 0.9572079891142862,
+      "class_evidence": {
+        "can": 71.26563236117363,
+        "cup": 3.185932159423828
+      }
+    },
+    {
+      "track_id": 9,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        6.190162065826066,
+        4.502748788008041,
+        0.0
+      ],
+      "position_std": [
+        0.03646758195257886,
+        0.024309661595714554,
+        0.0
+      ],
+      "observations": 10,
+      "mean_score": 0.8386173665523529,
+      "class_observations": 9,
+      "max_score": 0.9408038854598999,
+      "first_seen": 4.001999999999781,
+      "last_seen": 18.000000000000902,
+      "class_confidence": 0.9280650305760307,
+      "class_evidence": {
+        "bottle": 7.782914519309998,
+        "wrapper": 0.6032591462135315
+      }
+    },
+    {
+      "track_id": 10,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.8173488421512785,
+        4.300857263588982,
+        -3.549118715557946e-20
+      ],
+      "position_std": [
+        0.046333371606504095,
+        0.10169691027273961,
+        1.2225685854475581e-17
+      ],
+      "observations": 41,
+      "mean_score": 0.929541891667901,
+      "class_observations": 41,
+      "max_score": 0.9526280164718628,
+      "first_seen": 8.801999999999609,
+      "last_seen": 16.800000000001567,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "bottle": 38.11121755838394
+      }
+    },
+    {
+      "track_id": 11,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        5.116685319279412,
+        5.027950217831779,
+        0.0
+      ],
+      "position_std": [
+        0.04466491711051465,
+        0.11112031924604564,
+        0.0
+      ],
+      "observations": 22,
+      "mean_score": 0.8906915810975161,
+      "class_observations": 22,
+      "max_score": 0.9184420704841614,
+      "first_seen": 9.40199999999981,
+      "last_seen": 13.600000000001211,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "can": 19.595214784145355
+      }
+    },
+    {
+      "track_id": 13,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        4.995529767820664,
+        4.652005959760556,
+        -2.103361335438783e-20
+      ],
+      "position_std": [
+        0.028661782462229966,
+        0.11469667325840391,
+        1.926164577752561e-17
+      ],
+      "observations": 33,
+      "mean_score": 0.924456471746618,
+      "class_observations": 33,
+      "max_score": 0.9672356247901917,
+      "first_seen": 13.800000000001278,
+      "last_seen": 20.201999999999682,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "can": 30.507063567638397
+      }
+    },
+    {
+      "track_id": 14,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.699607501425798,
+        4.0825074628664915,
+        8.032037188874807e-18
+      ],
+      "position_std": [
+        0.07340306821459223,
+        0.017906720695188488,
+        3.235657119431221e-17
+      ],
+      "observations": 10,
+      "mean_score": 0.8382198810577393,
+      "class_observations": 10,
+      "max_score": 0.9475027918815613,
+      "first_seen": 17.000000000001457,
+      "last_seen": 46.2000000000105,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "bottle": 8.382198810577393
+      }
+    },
+    {
+      "track_id": 16,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        4.934386193899425,
+        4.421605319421509,
+        -7.911621615508704e-18
+      ],
+      "position_std": [
+        0.013749926171669478,
+        0.021227881639361384,
+        1.940591320695853e-17
+      ],
+      "observations": 7,
+      "mean_score": 0.9739579558372498,
+      "class_observations": 7,
+      "max_score": 0.9886630177497864,
+      "first_seen": 20.40199999999957,
+      "last_seen": 21.601999999998906,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "can": 6.817705690860748
+      }
+    },
+    {
+      "track_id": 17,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        1.052891653783253,
+        5.254878268878191,
+        -4.993895578184137e-18
+      ],
+      "position_std": [
+        0.11127009475802367,
+        0.00521989787637109,
+        1.588325847009619e-17
+      ],
+      "observations": 33,
+      "mean_score": 0.9295837499878623,
+      "class_observations": 33,
+      "max_score": 0.968720018863678,
+      "first_seen": 23.601999999997798,
+      "last_seen": 30.00199999999425,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "cup": 30.676263749599457
+      }
+    },
+    {
+      "track_id": 18,
+      "class_id": 3,
+      "class": "wrapper",
+      "position": [
+        0.7675333429664002,
+        3.928894773037711,
+        1.2725419332166611e-18
+      ],
+      "position_std": [
+        0.1264653446964713,
+        0.030718705558794704,
+        2.1383407550141606e-17
+      ],
+      "observations": 47,
+      "mean_score": 0.8719058125577075,
+      "class_observations": 47,
+      "max_score": 0.9669395685195923,
+      "first_seen": 24.401999999997354,
+      "last_seen": 33.6019999999951,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "wrapper": 40.97957319021225
+      }
+    },
+    {
+      "track_id": 20,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        1.2826256674648053,
+        5.245446864980512,
+        0.0
+      ],
+      "position_std": [
+        0.01719707417336368,
+        0.02367036924425494,
+        0.0
+      ],
+      "observations": 6,
+      "mean_score": 0.9675845901171366,
+      "class_observations": 6,
+      "max_score": 0.9798653721809387,
+      "first_seen": 30.20199999999414,
+      "last_seen": 31.201999999993586,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "cup": 5.80550754070282
+      }
+    },
+    {
+      "track_id": 21,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        1.189040227784343,
+        2.53940532061244,
+        -6.418080730307387e-20
+      ],
+      "position_std": [
+        0.042314826239394546,
+        0.09670718278580083,
+        1.8452830736859612e-17
+      ],
+      "observations": 37,
+      "mean_score": 0.9315583593136555,
+      "class_observations": 37,
+      "max_score": 0.9849814176559448,
+      "first_seen": 31.601999999993364,
+      "last_seen": 38.800000000001454,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "cup": 34.467659294605255
+      }
+    },
+    {
+      "track_id": 23,
+      "class_id": 3,
+      "class": "wrapper",
+      "position": [
+        0.9649477279520882,
+        4.02953448069767,
+        -9.367762495127543e-18
+      ],
+      "position_std": [
+        0.0113553416099234,
+        0.011938236396558135,
+        2.0790870746565957e-17
+      ],
+      "observations": 6,
+      "mean_score": 0.9622277617454529,
+      "class_observations": 6,
+      "max_score": 0.9742822051048279,
+      "first_seen": 33.801999999995346,
+      "last_seen": 34.80199999999657,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "wrapper": 5.773366570472717
+      }
+    },
+    {
+      "track_id": 24,
+      "class_id": 0,
+      "class": "bottle",
+      "position": [
+        5.961084934768247,
+        4.091636831510555,
+        3.4229336862193156e-18
+      ],
+      "position_std": [
+        0.10691599399728467,
+        0.010644414048991078,
+        1.9167720278070668e-17
+      ],
+      "observations": 33,
+      "mean_score": 0.9241574496933909,
+      "class_observations": 33,
+      "max_score": 0.9562880992889404,
+      "first_seen": 39.40000000000219,
+      "last_seen": 45.80000000001001,
+      "class_confidence": 1.0,
+      "class_evidence": {
+        "bottle": 30.497195839881897
+      }
+    },
+    {
+      "track_id": 25,
+      "class_id": 1,
+      "class": "can",
+      "position": [
+        5.336541348435033,
+        4.679072769067965,
+        -2.5524817140007144e-20
+      ],
+      "position_std": [
+        0.10160407081588681,
+        0.02516282043176156,
+        2.865653472366522e-17
+      ],
+      "observations": 8,
+      "mean_score": 0.8721349313855171,
+      "class_observations": 7,
+      "max_score": 0.9312785267829895,
+      "first_seen": 39.800000000002676,
+      "last_seen": 44.00000000000781,
+      "class_confidence": 0.900122863448339,
+      "class_evidence": {
+        "bottle": 0.6968507170677185,
+        "can": 6.2802287340164185
+      }
+    },
+    {
+      "track_id": 27,
+      "class_id": 2,
+      "class": "cup",
+      "position": [
+        0.746618747111906,
+        3.1621999104648317,
+        0.0
+      ],
+      "position_std": [
+        0.017697437189341584,
+        0.0371568223073154,
+        0.0
+      ],
+      "observations": 4,
+      "mean_score": 0.7524767741560936,
+      "class_observations": 3,
+      "max_score": 0.9169952273368835,
+      "first_seen": 55.2000000000215,
+      "last_seen": 55.80000000002223,
+      "class_confidence": 0.8582063222617853,
+      "class_evidence": {
+        "can": 0.42678579688072205,
+        "cup": 2.5831212997436523
+      }
+    }
+  ]
+}
