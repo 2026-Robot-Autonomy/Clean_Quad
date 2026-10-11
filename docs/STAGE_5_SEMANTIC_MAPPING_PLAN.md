@@ -1,11 +1,12 @@
 # Stage 5: semantic mapping plan
 
-**Status: planned; implementation and acceptance checks have not started.**
-Stage 4 is complete for the verified CNN seed-0 headless route. This plan
-implements the semantic-map scope already defined in the
+**Status: offline seed-0 implementation complete; acceptance checks passed on 11 Oct 2026.**
+See the [Stage 5 implementation report](STAGE_5_SEMANTIC_MAPPING.md) for the
+executed checks, API, artifacts, and remaining integration limits. This design
+record defines the semantic-map scope already specified in the
 [overall progress report](PROGRESS_REPORT_STAGES_1-3.md#6-next-steps).
-The file names, initial grid resolution, and acceptance checks below are
-proposals for beginning Stage 5, not claims about existing map code.
+The original proposed file structure, initial grid resolution, and acceptance
+criteria below have now been implemented for the offline milestone.
 
 ## Objective
 
@@ -50,12 +51,13 @@ detector. The map should also accept the same record schema from the live
 | [src/environment/plotting.py](../src/environment/plotting.py) | Campus plot to reuse when displaying map layers and item positions. |
 | [src/navigation/waypoint_follower.py](../src/navigation/waypoint_follower.py) | Existing scripted-route reference; autonomous map-based planning remains Stage 6. |
 
-Proposed additions are `src/mapping/grid.py`, `src/mapping/semantic_map.py`,
+Implemented additions are `src/mapping/grid.py`, `src/mapping/semantic_map.py`,
 `src/mapping/serialization.py`, `src/mapping/plotting.py`,
 `experiments/27_semantic_mapping.py`, and `tests/test_semantic_mapping.py`.
-These files do not exist yet, and there is no runnable Stage 5 command yet.
+Run `python experiments/27_semantic_mapping.py --require-pass` to build and
+validate the saved-input map.
 
-## First implementation steps
+## Implementation design
 
 1. **Define the map and input contracts.** Validate the track schema, finite
    positions, unique IDs, units, frame, and scene seed. Preserve the original
@@ -111,9 +113,10 @@ These files do not exist yet, and there is no runnable Stage 5 command yet.
 - A Stage 5 report stating the executed checks, their outcomes, and remaining
   limitations before the overall progress report marks this stage complete.
 
-## Proposed acceptance criteria
+## Acceptance criteria
 
-These checks make the existing roadmap concrete. They have **not** been run.
+These checks make the existing roadmap concrete. All pass for the offline
+seed-0 map; see the implementation report and saved `validation.json`.
 
 | Check | Required result |
 | --- | --- |
@@ -124,7 +127,7 @@ These checks make the existing roadmap concrete. They have **not** been run.
 | Updates and collection state | Reimporting an identity is idempotent; two identities in one cell remain separate. Marking an item collected changes active-item queries and survives later updates without changing the static map. |
 | Persistence and visualization | Export/reload preserves layers, coordinate metadata, provenance, item records, and collection state. The figure places all eight records in the correct world locations with readable terrain and blocked-region legends. |
 
-The first Stage 5 milestone is this offline seed-0 map passing those checks.
+The first Stage 5 milestone is complete: the offline seed-0 map passes those checks.
 Record additional-seed, live integration, or viewer tests only after they have
 actually been executed. Learned navigation, task ordering, battery/storage
 limits, and pickup remain later-stage work in the existing roadmap.

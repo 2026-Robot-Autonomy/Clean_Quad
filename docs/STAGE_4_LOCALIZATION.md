@@ -279,7 +279,7 @@ the model checksum, dependency versions, and association/confirmation settings.
 | Live viewer startup | A deliberately short CNN run with `--viewer --max-time 0.6` opened the window and exercised confirmed-marker rendering. Its temporary metadata records 0.6 simulated seconds, four frames, and 0/9 waypoints. It was a startup check, not a complete route; its partial map cannot certify Stage 4. |
 | Subsequent full CNN viewer route | Saved separately under `results/logs/localization_viewer/cnn/seed_0/`. Metadata records `viewer_enabled: true`, 318 frames, 9/9 waypoints, no fall, and about 408 seconds wall time. Depth maps 8/8 items with eight confirmed tracks, zero duplicates/misses/false positives, maximum error 4.92 cm, and `stage4_passed: true`. |
 | Flat-ground baseline | Evaluated on the same full seed-0 route and failed; this is the recorded ablation result and does not block depth completion. |
-| Still unverified | Additional CNN seeds, real-camera transfer, uncertain robot pose, moving litter, and Stage 5 semantic-map integration. |
+| Still unverified | Additional CNN seeds, real-camera transfer, uncertain robot pose, moving litter, and full live Stage 5 semantic-map integration. The offline Stage 5 milestone is now verified. |
 
 The viewer startup record was written under
 `/tmp/cleanquad-stage4-viewer-smoke/cnn/seed_0/run.json` in WSL, separate from
@@ -315,10 +315,11 @@ and known camera pose; it does not yet implement semantic grids, navigation
 planning, or pickup.
 
 Begin Stage 5 with the verified depth `tracks.json` and the campus layout.
-The [Stage 5 semantic mapping plan](STAGE_5_SEMANTIC_MAPPING_PLAN.md) specifies
-the input contract, relevant files, first implementation steps, deliverables,
-and proposed acceptance criteria. Semantic mapping remains planned; Stage 4's
-completion does not imply that a semantic grid has already been implemented.
+The [Stage 5 implementation report](STAGE_5_SEMANTIC_MAPPING.md) describes the
+implemented map, API, and artifacts. The offline seed-0 map now passes its
+12 acceptance checks; the full Stage 4–5 suite passes 54 tests. The map's
+`update_tracks` adapter accepts `pipeline.tracker.confirmed_tracks` with an
+explicit seed/run namespace. Full live map/viewer integration remains unverified.
 
 ## Local Windows/WSL execution
 

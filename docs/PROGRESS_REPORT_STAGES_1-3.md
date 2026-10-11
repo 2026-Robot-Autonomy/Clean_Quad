@@ -1,6 +1,6 @@
-# CleanQuad — Progress Report, Stages 1–4
+# CleanQuad — Progress Report, Stages 1–5
 
-*Simulated Unitree A1 quadruped for campus litter collection (MuJoCo). Status as of 10 Oct 2026.*
+*Simulated Unitree A1 quadruped for campus litter collection (MuJoCo). Status as of 11 Oct 2026.*
 
 | Stage | Title | Status |
 |---|---|---|
@@ -8,8 +8,8 @@
 | 2 | Campus / street environment | **Done** |
 | 3 | Litter perception | **Done** (CNN + classical baseline, evaluated) |
 | 4 | 3-D litter localization | **Done** (CNN seed-0 headless route passes; 31 unit tests pass) |
-| 5 | Semantic mapping | **Next** (implementation planned) |
-| 6 | Autonomous navigation (RL navigator) | Planned |
+| 5 | Semantic mapping | **Done** (offline seed-0 map; 12 acceptance checks and 54 total unit tests pass) |
+| 6 | Autonomous navigation (RL navigator) | **Next** (planned: A* baseline, then PPO navigator) |
 | 7 | Cleaning / pickup | Planned |
 | 8 | Task planning & optimization | Planned |
 
@@ -329,7 +329,8 @@ independently of the earlier short check.
 
 Additional seeds and real-camera transfer remain unverified. The flat-ground baseline's
 recorded failure is an ablation result, not a failure of the depth completion gate.
-Stage 5 semantic mapping has not yet been implemented.
+Stage 5's offline semantic map is now implemented and verified; full live map
+integration remains unverified. See the [Stage 5 report](STAGE_5_SEMANTIC_MAPPING.md).
 
 ---
 
@@ -351,13 +352,15 @@ python3 experiments/22_generate_dataset.py             # ~4000 labelled images
 python3 experiments/23_train_detectors.py              # baseline + YOLOv8n (~75 min)
 python3 experiments/24_evaluate_detectors.py           # tables + figures above
 python3 experiments/25_perception_demo.py              # live demo (add --detector color)
-python3 -m unittest discover -s tests -v                # 31 Stage 4 unit tests
+python3 -m unittest discover -s tests -v                # 54 Stage 4–5 unit tests
 python3 experiments/26_localization_pipeline.py --detector cnn --device cpu --seeds 0 --require-pass
+python3 experiments/27_semantic_mapping.py --require-pass  # offline Stage 5 map
 ```
 
 Outputs:
+
 - `results/figures/`: figures.
-- `results/logs/`: CSV logs.
+- `results/logs/`: experiment logs, semantic-map JSON/NPZ, validation results, and source snapshots.
 - `results/videos/`: animations.
 - `models/`: trained detectors.
 
@@ -365,32 +368,73 @@ Outputs:
 
 ## 6. Next Steps
 
-### Stage 5 — Semantic mapping (immediate next)
+### Stage 5 — Semantic mapping (offline milestone complete)
 
-**Goal from the existing roadmap:** create a 2-D grid storing occupancy and terrain type
-from `layout.py`, together with Stage 4 litter records containing class, confidence, and
-collected / uncollected state. Stage 5 prepares the map consumed by Stage 6 navigation
-and the collection-state updates used by Stage 7.
+Semantic mapping attaches meaning, such as road, ramp, obstacle, or litter class, to
+positions in the world. For CleanQuad, it combines where litter is with where the
+quadruped can walk, giving navigation the information needed to select reachable targets
+and approach routes. It also remembers which items have been collected.
 
-Begin offline with the verified
+**Implemented:** the map combines the verified Stage 4 CNN seed-0
 [depth tracks](../results/logs/localization/cnn/seed_0/depth/tracks.json) and
-[`CampusLayout`](../src/environment/layout.py), keeping the run's seed and world frame.
-Define the grid indexing and boundary policy, rasterize terrain and obstacle/no-go
-geometry, and attach each confirmed item by its track identity while preserving its
-full 3-D position. Add collection-state updates, export/reload support, and a figure
-showing the grid, blocked regions, base, bins, and litter classes.
+[`CampusLayout`](../src/environment/layout.py), using metres in the MuJoCo world frame
+(x east, y north, z up). The implementation is in
+[`src/mapping/`](../src/mapping/semantic_map.py), with an offline runner in
+[experiment 27](../experiments/27_semantic_mapping.py).
 
-The [Stage 5 semantic mapping plan](STAGE_5_SEMANTIC_MAPPING_PLAN.md) lists required inputs,
-existing and proposed files, the implementation sequence, expected artifacts, and proposed
-acceptance criteria. The first checkpoint is a deterministic seed-0 map that retains all
-eight confirmed items, preserves the ramp connection, blocks curbs and obstacles, and
-round-trips through serialization. These are planned checks, not completed validation.
+- **Grid and layers:** 80 columns × 60 rows (4,800 cells) at 10 cm resolution cover
+  the 8 × 6 m campus. Cells store terrain labels, ground height, solid occupancy,
+  forbidden regions, a nontraversable perimeter, and traversability. Optional clearance
+  padding is a separate layer; the saved default uses a 0 m clearance radius.
+- **Conservative geometry:** obstacle and no-go footprints are intersected with cells
+  so thin poles and curb bands are retained. Occupancy is separate from traversability:
+  a curb can be forbidden without being a solid obstacle. The ramp opening remains connected.
+- **Litter and collection state:** all eight records retain their track IDs, classes,
+  precise 3-D positions, observation counts, timestamps, scores, class evidence, and
+  position spread. IDs are scoped to a scene/run; updates are atomic, multiple items
+  can share a cell, and collected state survives later observations and reload.
+- **Persistence and display:** JSON metadata/items and NPZ layers support export/reload,
+  with source provenance and byte-for-byte Stage 4 input snapshots. A labelled figure
+  shows the semantic grid beside the known campus layout. Collection-state updates
+  affect the map; physical pickup remains Stage 7 work.
+
+**Verified results:** all **54 unit tests passed** (31 Stage 4 and 23 Stage 5), as recorded
+in the [executed validation report](STAGE_5_SEMANTIC_MAPPING.md#executed-validation).
+The [mapping tests](../tests/test_semantic_mapping.py) cover geometry, coordinates,
+identity/state updates, invalid inputs, serialization, and the confirmed-track adapter.
+All **12 offline acceptance checks passed**, with `stage5_passed: true` in the saved
+[validation JSON](../results/logs/semantic_mapping/cnn/seed_0/validation.json).
+These checks confirm ramp connectivity without a curb bypass, blocked obstacles/no-go
+regions, exact preservation of all eight source records, idempotent imports, collection
+state, multiple items per cell, and export/reload equality.
+
+The saved [summary](../results/logs/semantic_mapping/cnn/seed_0/summary.json) records
+eight active items, zero collected items, 92 occupied cells, and 4,036 traversable cells.
+The [serialized map](../results/logs/semantic_mapping/cnn/seed_0/map.json) retains the
+coordinate contract, original item evidence, source hashes, and collection state.
+The [comparison figure](../results/logs/semantic_mapping/cnn/seed_0/map.png) was visually
+inspected. See the [Stage 5 guide](STAGE_5_SEMANTIC_MAPPING.md) for API and reproduction details.
+
+**Validation scope:** the completed milestone is an offline seed-0 map built from a
+known layout and Stage 4 estimates, with known simulator pose. The live confirmed-track
+adapter has a synthetic unit test; full live semantic-map/viewer integration and
+additional scene seeds/layouts remain unverified. The map does not establish SLAM,
+navigation performance, or physical pickup. Stage 6 can now begin; clearance and
+navigation integration need their own validation.
 
 ### Later stages (planned design)
+
 - **Stage 6 — Navigation.**
-  - Classical global planner: A* on the map.
-  - **RL (PPO) local navigator**, trained in a fast 2-D abstraction that uses the certified
-    (vx, wz) envelope, then tested in MuJoCo against the classical planner.
+  - Implement an A* baseline on the traversable grid to produce routes to reachable
+    litter approach positions, respecting obstacles, no-go regions, and the ramp passage.
+  - Choose clearance from the robot footprint and check that planned routes fit around
+    obstacles and through the ramp; the default 0 m padding is not a robot-clearance validation.
+  - Connect planned waypoints to the existing `LocomotionInterface(vx, wz)` and integrate
+    live localization updates through the semantic-map API.
+  - Test unreachable goals, obstacle/curb avoidance, ramp traversal, and complete MuJoCo
+    routes without falls. Validate full live map/viewer integration and additional scene seeds.
+  - Then add the **RL (PPO) local navigator** from the roadmap, trained in a fast 2-D
+    abstraction using the certified (vx, wz) envelope and compared with the A* baseline in MuJoCo.
 - **Stage 7 — Pickup.** A simulated scoop or suction action: when the robot is close enough, the
   litter body is removed (`Campus.collect`) and the map is updated.
 - **Stage 8 — Task planning.** Choose the next item by distance, terrain risk and priority; add
@@ -399,5 +443,5 @@ round-trips through serialization. These are planned checks, not completed valid
 ### Remaining validation and documentation
 
 - Validate additional CNN seeds; seed-0 headless and full-viewer results are recorded separately.
-- Keep the Stage 4 input records and run metadata alongside the Stage 5 map for reproducibility.
-- The README now contains the project overview, Stage 4 status, and run commands; this checkout is already a Git repository.
+- Preserve the saved Stage 4 input snapshots and Stage 5 artifacts as reproducible inputs
+  for Stage 6 experiments.
