@@ -1,0 +1,63 @@
+{
+  "config": {
+    "clearance_radius": 0.45,
+    "approach_min": 0.45,
+    "approach_max": 0.65,
+    "approach_preferred": 0.5,
+    "grass_cost": 1.15
+  },
+  "approaches": [
+    {
+      "track_id": 1,
+      "position": [
+        1.1500000000000001,
+        0.75
+      ],
+      "yaw": -0.41656088022814763,
+      "standoff": 0.48718568793637856,
+      "route": {
+        "waypoints": [
+          [
+            0.8,
+            1.0
+          ],
+          [
+            1.1500000000000001,
+            0.75
+          ]
+        ],
+        "cells": [
+          [
+            10,
+            8
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            7,
+            11
+          ]
+        ],
+        "grid_cost": 0.42426406871192857,
+        "length": 0.43011626335213143
+      }
+    }
+  ],
+  "failures": [],
+  "checks": {
+    "positive_robot_padding": true,
+    "at_least_one_reachable_approach": true,
+    "all_path_segments_clear": true,
+    "all_goals_clear": true,
+    "ramp_passage": true,
+    "unreachable_when_ramp_closed": true,
+    "occupied_goal_rejected": true,
+    "all_items_classified": true
+  }
+}

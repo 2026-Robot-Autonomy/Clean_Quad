@@ -1,0 +1,156 @@
+{
+  "track_id": 12,
+  "status": "success",
+  "success": true,
+  "simulated_seconds": 37.974000000000444,
+  "wall_seconds": 10.628028814999993,
+  "goal_position": [
+    1.75,
+    2.6500000000000004
+  ],
+  "goal_yaw_rad": 2.9717011861619667,
+  "planned_standoff_m": 0.5522616768205982,
+  "planned_length_m": 7.17784658455753,
+  "waypoints": [
+    [
+      0.8,
+      1.0
+    ],
+    [
+      4.0,
+      0.9230778166569474
+    ],
+    [
+      4.0,
+      2.65
+    ],
+    [
+      1.75,
+      2.6500000000000004
+    ]
+  ],
+  "final_pose": [
+    1.8106051192047161,
+    2.6613948221713115,
+    3.0729986523667026
+  ],
+  "final_position_error_m": 0.06166702884146159,
+  "final_heading_error_deg": 5.803917288900456,
+  "final_speed_m_s": 0.00023494837434842911,
+  "min_grid_clearance_m": 0.5436987332874157,
+  "max_projected_robot_radius_m": 0.38834059133208365,
+  "max_roll_deg": 3.6169020155631157,
+  "max_pitch_deg": 10.914967917275339,
+  "collision_geoms": [],
+  "collision_examples": [],
+  "support_transition_contact_samples": 56,
+  "support_transition_examples": [
+    {
+      "world_geom": "terrain_ramp",
+      "robot_geom": 70,
+      "robot_body": "RR_calf",
+      "position": [
+        4.188442867486329,
+        1.5727766469001496,
+        0.0001669728455366143
+      ],
+      "normal": [
+        0.0,
+        0.8745806420176734,
+        -0.4848800888961665
+      ]
+    },
+    {
+      "world_geom": "terrain_ramp",
+      "robot_geom": 71,
+      "robot_body": "RR_calf",
+      "position": [
+        4.188442867486329,
+        1.577149550110238,
+        -0.00225742759894422
+      ],
+      "normal": [
+        0.0,
+        0.8745806420176728,
+        -0.4848800888961674
+      ]
+    },
+    {
+      "world_geom": "terrain_ramp",
+      "robot_geom": 70,
+      "robot_body": "RR_calf",
+      "position": [
+        4.1885454072358375,
+        1.5735884726934497,
+        -0.00024009950771653257
+      ],
+      "normal": [
+        0.0,
+        0.9049614944184273,
+        -0.42549347071367233
+      ]
+    },
+    {
+      "world_geom": "terrain_ramp",
+      "robot_geom": 71,
+      "robot_body": "RR_calf",
+      "position": [
+        4.188545407235837,
+        1.578113280165542,
+        -0.002367566861284899
+      ],
+      "normal": [
+        0.0,
+        0.9049614944184273,
+        -0.42549347071367233
+      ]
+    },
+    {
+      "world_geom": "terrain_ramp",
+      "robot_geom": 70,
+      "robot_body": "RR_calf",
+      "position": [
+        4.188641608109792,
+        1.5742499028963763,
+        -0.00045359859282886536
+      ],
+      "normal": [
+        0.0,
+        0.9325981520249519,
+        -0.3609164540993453
+      ]
+    }
+  ],
+  "shield_interventions": 0,
+  "replanning_events": [],
+  "live_goal_updates": [],
+  "controller": "PPO",
+  "ppo_inference_calls": 372,
+  "reset_before_route": true,
+  "follower_config": {
+    "forward_speed": 0.3,
+    "near_speed": 0.1,
+    "yaw_rate": 0.3,
+    "waypoint_tolerance": 0.04,
+    "goal_tolerance": 0.08,
+    "start_turn": 0.20943951023931956,
+    "stop_turn": 0.05235987755982989,
+    "heading_tolerance": 0.10471975511965978
+  },
+  "control_hz": 10.0,
+  "start_pose": [
+    0.8,
+    1.0,
+    0.0
+  ],
+  "scene_seed": 0,
+  "policy_seed": 2,
+  "algorithm": "ppo",
+  "class": "cup",
+  "item_position": [
+    1.2056891666674752,
+    2.74337385287944,
+    0.11962849815981898
+  ],
+  "target_source": "saved Stage 4 CNN depth tracks"
+}

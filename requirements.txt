@@ -8,3 +8,7 @@ pillow
 torch
 torchvision
 ultralytics
+
+# Stage 6 navigation training (verified versions)
+gymnasium==1.4.0
+stable-baselines3==2.9.0

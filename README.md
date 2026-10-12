@@ -36,5 +36,32 @@ collection state. All 54 unit tests and 12 offline acceptance checks pass.
 The map, input snapshots, validation results, and figure are saved under
 `results/logs/semantic_mapping/cnn/seed_0/`. See the
 [Stage 5 implementation reference](docs/CLEANQUAD_COMPLETE_REPORT_STAGES_1-5.md#stage5-implementation) for the API, reproduction
-commands, coordinate contract, and validation limits. Full live map integration
-and Stage 6 navigation remain later work.
+commands, coordinate contract, and validation limits. Stage 6 now connects this
+map to continuous live RGB-D/CNN updates and navigation.
+
+Stage 6 is implemented and verified for the known static campus: clearance-aware
+A*, the classical baseline, and an imitation-initialized PPO local navigator.
+Three CPU PPO runs each completed 1,001,472 transitions, and each selected model
+passed 100/100 fresh local-goal test cases. The combined MuJoCo comparison passed
+59/59 distinct routes, and the continuous live CNN/map/PPO viewer mission visited
+seven reachable targets and returned to base without resetting the simulation.
+All 93 regression tests pass. One of eight known items is unreachable under the
+conservative 0.45 m circular footprint; the live map retains one unmatched
+detection. Robot pose is supplied by the simulator; pickup and task planning are
+Stages 7 and 8. See the [Stage 6 final report](docs/STAGE_6_FINAL_REPORT.md) for the
+complete pipeline, every checkpoint's transitions/success rate, compute,
+comparison figures, live mission results and limitations. The original
+[baseline report](docs/STAGE_6_NAVIGATION_BASELINE.md) remains historical evidence.
+
+```bash
+python -B experiments/28_navigation_baseline.py --diagnostic-seeds 1 2 --require-pass
+python -B experiments/29_train_navigation.py --seeds 0 1 2 --timesteps 1000000 --output models/navigation/ppo_full --initial-policy models/navigation/ppo/seed_0/imitation.zip
+python -B experiments/30_evaluate_navigation.py --models models/navigation/ppo_full --output results/logs/navigation/comparison_full/full --policy-seeds 0 1 2 --scene-seeds 0 1 2 --require-pass
+python -B experiments/31_live_navigation.py --checkpoint models/navigation/ppo_full/seed_0/best.zip --camera-rate 1 --viewer --require-pass
+```
+
+The trained models already exist under `models/navigation/ppo_full/seed_*/`.
+Use `best.zip` for deployment; the last training update is `final.zip` and the
+supervised initializer is `imitation.zip`. The final report includes the exact
+split comparison commands used for its recorded results. The RL environments
+are fast 2-D abstractions; MuJoCo supplies the independent robot-physics checks.

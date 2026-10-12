@@ -1,0 +1,14 @@
+{
+  "seeds": [
+    0
+  ],
+  "models": [
+    {
+      "seed": 0,
+      "steps": 120832,
+      "held_out_success_rate": 0.95,
+      "best_step": 20000,
+      "wall_seconds": 136.223130139
+    }
+  ]
+}

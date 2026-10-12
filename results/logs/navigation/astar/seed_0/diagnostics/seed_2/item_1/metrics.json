@@ -1,0 +1,66 @@
+{
+  "track_id": 1,
+  "status": "success",
+  "success": true,
+  "simulated_seconds": 21.047999999999213,
+  "wall_seconds": 6.1879157920000125,
+  "goal_position": [
+    6.050000000000001,
+    0.75
+  ],
+  "goal_yaw_rad": -0.4044005661174149,
+  "planned_standoff_m": 0.5044996647077525,
+  "planned_length_m": 5.255949010407161,
+  "waypoints": [
+    [
+      0.8,
+      1.0
+    ],
+    [
+      6.050000000000001,
+      0.75
+    ]
+  ],
+  "final_pose": [
+    5.988508069431797,
+    0.7590577251105062,
+    -0.31942023372008466
+  ],
+  "final_position_error_m": 0.06215544955337639,
+  "final_heading_error_deg": 4.869014387985888,
+  "final_speed_m_s": 4.1889008196441815e-05,
+  "min_grid_clearance_m": 0.6523587977524536,
+  "max_projected_robot_radius_m": 0.388490260658482,
+  "max_roll_deg": 3.612705525788192,
+  "max_pitch_deg": 3.3971641823235266,
+  "collision_geoms": [],
+  "collision_examples": [],
+  "support_transition_contact_samples": 0,
+  "support_transition_examples": [],
+  "shield_interventions": 0,
+  "replanning_events": [],
+  "follower_config": {
+    "forward_speed": 0.3,
+    "near_speed": 0.1,
+    "yaw_rate": 0.3,
+    "waypoint_tolerance": 0.04,
+    "goal_tolerance": 0.08,
+    "start_turn": 0.20943951023931956,
+    "stop_turn": 0.05235987755982989,
+    "heading_tolerance": 0.10471975511965978
+  },
+  "control_hz": 10.0,
+  "start_pose": [
+    0.8,
+    1.0,
+    0.0
+  ],
+  "seed": 2,
+  "class": "bottle",
+  "item_position": [
+    6.513805924754243,
+    0.5514956528105814,
+    0.036401407363519156
+  ],
+  "target_source": "simulator true-position diagnostic; not CNN validation"
+}

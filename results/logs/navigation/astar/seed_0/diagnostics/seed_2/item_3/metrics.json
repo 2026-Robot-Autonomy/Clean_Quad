@@ -1,0 +1,8 @@
+{
+  "seed": 2,
+  "track_id": 3,
+  "success": false,
+  "status": "unreachable",
+  "reason": "litter is in a forbidden or occupied cell",
+  "target_source": "simulator true-position diagnostic"
+}

@@ -1,0 +1,8 @@
+{
+  "seed": 1,
+  "track_id": 1,
+  "success": false,
+  "status": "unreachable",
+  "reason": "no reachable litter approach pose within the standoff range",
+  "target_source": "simulator true-position diagnostic"
+}

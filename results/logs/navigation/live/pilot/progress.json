@@ -1,0 +1,326 @@
+{
+  "routes": [
+    {
+      "track_id": 1,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 5.961999999999565,
+      "wall_seconds": 28.33868393700004,
+      "goal_position": [
+        1.1500000000000001,
+        0.75
+      ],
+      "goal_yaw_rad": -0.41656088022814763,
+      "planned_standoff_m": 0.48718568793637856,
+      "planned_length_m": 0.43011626335213143,
+      "waypoints": [
+        [
+          0.8,
+          1.0
+        ],
+        [
+          1.1500000000000001,
+          0.75
+        ]
+      ],
+      "final_pose": [
+        1.1002127192514581,
+        0.7746419946599076,
+        -0.4954247190740777
+      ],
+      "final_position_error_m": 0.05555178867645086,
+      "final_heading_error_deg": 4.5185651220716725,
+      "final_speed_m_s": 0.0001309326132111096,
+      "min_grid_clearance_m": 0.6331177806397476,
+      "max_projected_robot_radius_m": 0.3878344884568209,
+      "max_roll_deg": 3.286408286958437,
+      "max_pitch_deg": 3.380138758286131,
+      "collision_geoms": [],
+      "collision_examples": [],
+      "support_transition_contact_samples": 0,
+      "support_transition_examples": [],
+      "shield_interventions": 0,
+      "replanning_events": [],
+      "live_goal_updates": [],
+      "controller": "PPO",
+      "ppo_inference_calls": 50,
+      "reset_before_route": false,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.04,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        0.8,
+        1.0,
+        0.0
+      ],
+      "class": "wrapper",
+      "target_source": "prior CNN map, refined by online RGB-D/CNN tracks"
+    }
+  ],
+  "unreachable": [],
+  "stats": {
+    "frames": 18,
+    "detections": 51,
+    "localization_observations": 51,
+    "detector_seconds": 25.850382454999817,
+    "render_seconds": 6.765754899999365,
+    "updates": [
+      {
+        "time": 0.0,
+        "detections": 3,
+        "confirmed_tracks": 0,
+        "map_records_updated": 0,
+        "robot_pose": [
+          0.8,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "time": 0.33400000000000024,
+        "detections": 5,
+        "confirmed_tracks": 0,
+        "map_records_updated": 0,
+        "robot_pose": [
+          0.7652072362515947,
+          1.0021833656684145,
+          -0.008568155621724314
+        ]
+      },
+      {
+        "time": 0.6680000000000005,
+        "detections": 4,
+        "confirmed_tracks": 3,
+        "map_records_updated": 3,
+        "robot_pose": [
+          0.7522175163116137,
+          0.9997349393557462,
+          -0.033257300417919106
+        ]
+      },
+      {
+        "time": 1.0000000000000007,
+        "detections": 4,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          0.7346642947356288,
+          1.0036423977345619,
+          -0.09584852209434687
+        ]
+      },
+      {
+        "time": 1.334000000000001,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          0.737035787627536,
+          1.0088992090296098,
+          -0.2229492921734712
+        ]
+      },
+      {
+        "time": 1.6680000000000013,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          0.7348216802634574,
+          1.0063943438830136,
+          -0.34485993298433376
+        ]
+      },
+      {
+        "time": 2.0000000000000013,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          0.7623116946004946,
+          0.9940484307807302,
+          -0.3930871799696944
+        ]
+      },
+      {
+        "time": 2.3339999999999645,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          0.8171888445261738,
+          0.965090457227587,
+          -0.44849278791563985
+        ]
+      },
+      {
+        "time": 2.6679999999999278,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          0.8770878628493769,
+          0.9345460986013338,
+          -0.5072987883400238
+        ]
+      },
+      {
+        "time": 3.001999999999891,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          0.933299648093393,
+          0.899320686716171,
+          -0.49559871795425614
+        ]
+      },
+      {
+        "time": 3.3339999999998544,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          0.9832923658937169,
+          0.8694738336504239,
+          -0.5324995474155112
+        ]
+      },
+      {
+        "time": 3.6679999999998176,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.0231119336963737,
+          0.8447614801685907,
+          -0.5772280884041623
+        ]
+      },
+      {
+        "time": 4.001999999999781,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.0528942709500893,
+          0.8231632994173188,
+          -0.5652447071174134
+        ]
+      },
+      {
+        "time": 4.333999999999745,
+        "detections": 1,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.0781081110624569,
+          0.805147750294592,
+          -0.6002500133330633
+        ]
+      },
+      {
+        "time": 4.667999999999708,
+        "detections": 1,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.0948703548591376,
+          0.7912573404859887,
+          -0.6109286891684703
+        ]
+      },
+      {
+        "time": 5.001999999999671,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.0894502644727782,
+          0.772666658952883,
+          -0.48101921354892013
+        ]
+      },
+      {
+        "time": 5.333999999999635,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.1041982672879802,
+          0.772953396147972,
+          -0.4947681689228899
+        ]
+      },
+      {
+        "time": 5.667999999999598,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.1001469735168787,
+          0.7746849107138446,
+          -0.49533230917309107
+        ]
+      }
+    ]
+  },
+  "bridge": {
+    "frame_batches": 18,
+    "records_updated": 63,
+    "online_identities": 4,
+    "new_items": 0,
+    "outside_map_track_samples": 0,
+    "association_events": [
+      {
+        "online_track_id": 1,
+        "map_track_id": 1,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          1.5730801401511296,
+          0.5482432783174966,
+          0.008176676639025238
+        ]
+      },
+      {
+        "online_track_id": 2,
+        "map_track_id": 2,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          5.436582902509035,
+          3.876128244617967,
+          0.10087516627556549
+        ]
+      },
+      {
+        "online_track_id": 3,
+        "map_track_id": 3,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          5.065642636360952,
+          1.6171009036152555,
+          0.03183237249318247
+        ]
+      },
+      {
+        "online_track_id": 5,
+        "map_track_id": 5,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          6.2413248716357606,
+          1.4320355245194496,
+          0.04155704768194325
+        ]
+      }
+    ],
+    "run_id": "stage6-live-0-1791820452874722311"
+  }
+}

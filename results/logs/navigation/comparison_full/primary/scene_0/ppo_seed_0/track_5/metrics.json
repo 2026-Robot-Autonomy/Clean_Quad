@@ -1,0 +1,72 @@
+{
+  "track_id": 5,
+  "status": "success",
+  "success": true,
+  "simulated_seconds": 19.062000000000314,
+  "wall_seconds": 11.943721297000138,
+  "goal_position": [
+    5.75,
+    1.35
+  ],
+  "goal_yaw_rad": 0.1797100675700137,
+  "planned_standoff_m": 0.506138877166051,
+  "planned_length_m": 4.962358310319802,
+  "waypoints": [
+    [
+      0.8,
+      1.0
+    ],
+    [
+      5.75,
+      1.35
+    ]
+  ],
+  "final_pose": [
+    5.681815700092379,
+    1.3398434780911137,
+    0.11726688704032401
+  ],
+  "final_position_error_m": 0.06893659181579904,
+  "final_heading_error_deg": 3.577730703724707,
+  "final_speed_m_s": 0.001084704938047194,
+  "min_grid_clearance_m": 0.5495226333846484,
+  "max_projected_robot_radius_m": 0.38724853425182554,
+  "max_roll_deg": 1.1837861853349587,
+  "max_pitch_deg": 3.409552905928836,
+  "collision_geoms": [],
+  "collision_examples": [],
+  "support_transition_contact_samples": 0,
+  "support_transition_examples": [],
+  "shield_interventions": 0,
+  "replanning_events": [],
+  "live_goal_updates": [],
+  "controller": "PPO",
+  "ppo_inference_calls": 183,
+  "reset_before_route": true,
+  "follower_config": {
+    "forward_speed": 0.3,
+    "near_speed": 0.1,
+    "yaw_rate": 0.3,
+    "waypoint_tolerance": 0.04,
+    "goal_tolerance": 0.08,
+    "start_turn": 0.20943951023931956,
+    "stop_turn": 0.05235987755982989,
+    "heading_tolerance": 0.10471975511965978
+  },
+  "control_hz": 10.0,
+  "start_pose": [
+    0.8,
+    1.0,
+    0.0
+  ],
+  "scene_seed": 0,
+  "policy_seed": 0,
+  "algorithm": "ppo",
+  "class": "can",
+  "item_position": [
+    6.2479877929319185,
+    1.440469448266846,
+    0.04217407992317746
+  ],
+  "target_source": "saved Stage 4 CNN depth tracks"
+}

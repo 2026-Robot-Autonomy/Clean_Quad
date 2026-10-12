@@ -24,7 +24,7 @@ failure investigations, and remaining validation. Stage 6 navigation is the next
 
 ## Project status
 
-*Simulated Unitree A1 quadruped for campus litter collection (MuJoCo). Status as of 11 Oct 2026.*
+*Simulated Unitree A1 quadruped for campus litter collection (MuJoCo). Stages 1-5 status as of 11 Oct 2026; Stage 6 baseline update on 12 Oct 2026.*
 
 | Stage | Title | Status |
 |---|---|---|
@@ -33,7 +33,7 @@ failure investigations, and remaining validation. Stage 6 navigation is the next
 | 3 | Litter perception | **Done** (CNN + classical baseline, evaluated) |
 | 4 | 3-D litter localization | **Done** (CNN seed-0 headless route passes; 31 unit tests pass) |
 | 5 | Semantic mapping | **Done** (offline seed-0 map; 12 acceptance checks and 54 total unit tests pass) |
-| 6 | Autonomous navigation (RL navigator) | **Next** (planned: A* baseline, then PPO navigator) |
+| 6 | Autonomous navigation (RL navigator) | **A* baseline verified on 12 Oct** (7/7 reachable saved-map targets; 1 unreachable; live integration and PPO remain planned) |
 | 7 | Cleaning / pickup | Planned |
 | 8 | Task planning & optimization | Planned |
 
@@ -1206,25 +1206,30 @@ Outputs:
 
 ## 7. Next Steps
 
-Proceed with Stage 6. The required offline Stage 5 checks are complete; the next work
-is to turn the map into navigation routes and validate them with the quadruped.
-Start with the A* baseline, choose and validate robot clearance, connect route execution
-and live map updates, then test full simulation routes and additional scenes. Develop
-and compare the PPO local navigator after the baseline is established. Stages 7 and 8
-add physical pickup and task planning respectively.
+Stage 6 is now implemented and verified in the known static-campus simulation.
+See the [Stage 6 final report](STAGE_6_FINAL_REPORT.md) for the complete pipeline,
+three million-transition PPO runs, success rates at every checkpoint, 59/59
+distinct MuJoCo comparison routes, a continuous live CNN/map/PPO viewer mission
+with seven reachable targets and return to base, and 93 passing regression tests.
+The conservative 0.45 m footprint still leaves one of eight targets unreachable,
+and the live map retains one unmatched detection. The original
+[Stage 6 baseline report](STAGE_6_NAVIGATION_BASELINE.md) is preserved.
+Earlier live-integration limitations in the Stage 5 chapter describe its offline
+milestone; the Stage 6 report records the later live validation. Stages 7 and 8
+remain the next work for physical pickup and task planning.
 
-### Later stages (planned design)
+### Stage 6 delivered design and later stages
 
 - **Stage 6 — Navigation.**
-  - Implement an A* baseline on the traversable grid to produce routes to reachable
+  - Implemented an A* baseline on the traversable grid to produce routes to reachable
     litter approach positions, respecting obstacles, no-go regions, and the ramp passage.
-  - Choose clearance from the robot footprint and check that planned routes fit around
+  - Selected clearance from the robot footprint and checked that planned routes fit around
     obstacles and through the ramp; the default 0 m padding is not a robot-clearance validation.
-  - Connect planned waypoints to the existing `LocomotionInterface(vx, wz)` and integrate
+  - Connected planned waypoints to the existing `LocomotionInterface(vx, wz)` and integrated
     live localization updates through the semantic-map API.
-  - Test unreachable goals, obstacle/curb avoidance, ramp traversal, and complete MuJoCo
-    routes without falls. Validate full live map/viewer integration and additional scene seeds.
-  - Then add the **RL (PPO) local navigator** from the roadmap, trained in a fast 2-D
+  - Tested unreachable goals, obstacle/curb avoidance, ramp traversal, and complete MuJoCo
+    routes without falls. Validated full live map/viewer integration and additional navigation scene seeds.
+  - Added the **RL (PPO) local navigator** from the roadmap, trained in a fast 2-D
     abstraction using the certified (vx, wz) envelope and compared with the A* baseline in MuJoCo.
 - **Stage 7 — Pickup.** A simulated scoop or suction action: when the robot is close enough, the
   litter body is removed (`Campus.collect`) and the map is updated.

@@ -1,0 +1,163 @@
+{
+  "baseline_passed": true,
+  "checks": {
+    "positive_robot_padding": true,
+    "at_least_one_reachable_approach": true,
+    "all_path_segments_clear": true,
+    "all_goals_clear": true,
+    "ramp_passage": true,
+    "unreachable_when_ramp_closed": true,
+    "occupied_goal_rejected": true,
+    "all_items_classified": true,
+    "sampled_footprint_plus_margin": true,
+    "all_reachable_routes_successful": true
+  },
+  "configuration": {
+    "algorithm": "A* + stop/turn/drive follower",
+    "rl_training": false,
+    "scope": "offline saved-CNN-map navigation; simulator robot pose; no live mapping or pickup",
+    "seed": 0,
+    "run_id": "stage4:9d38103d3012a6ae8761e877f56764ef67f79590c8ff201ac0913658999923c7",
+    "navigation_config": {
+      "clearance_radius": 0.45,
+      "approach_min": 0.45,
+      "approach_max": 0.65,
+      "approach_preferred": 0.5,
+      "grass_cost": 1.15
+    },
+    "selected_track_ids": [
+      1
+    ],
+    "map_json_sha256": "bb29642c57ddaf6cdaa00d1c395e292a16a8d7cdd64a91e2ff74bfa6b50ad3b7",
+    "layers_sha256": "2cfc5e9365da2677fb183184afecc79e0e8f396fdc219502e5fb65336d31aeb9",
+    "python": "3.13.15",
+    "offline_only": false,
+    "mujoco_version": "3.14.0"
+  },
+  "footprint": {
+    "scope": "sampled collision-geometry bounds, flat road; six command cases",
+    "sample_rate_hz": 50,
+    "cases": [
+      {
+        "case": "stand",
+        "vx": 0,
+        "wz": 0,
+        "simulated_seconds": 3.0,
+        "max_projected_radius_m": 0.37904183893044996
+      },
+      {
+        "case": "forward",
+        "vx": 0.3,
+        "wz": 0,
+        "simulated_seconds": 3.0,
+        "max_projected_radius_m": 0.38738420057743667
+      },
+      {
+        "case": "left_curve",
+        "vx": 0.3,
+        "wz": 0.3,
+        "simulated_seconds": 3.0,
+        "max_projected_radius_m": 0.38732196122473345
+      },
+      {
+        "case": "right_curve",
+        "vx": 0.3,
+        "wz": -0.3,
+        "simulated_seconds": 3.0,
+        "max_projected_radius_m": 0.38848259209924635
+      },
+      {
+        "case": "left_rotation",
+        "vx": 0,
+        "wz": 0.3,
+        "simulated_seconds": 3.0,
+        "max_projected_radius_m": 0.3875947582466171
+      },
+      {
+        "case": "right_rotation",
+        "vx": 0,
+        "wz": -0.3,
+        "simulated_seconds": 3.0,
+        "max_projected_radius_m": 0.389124572939614
+      }
+    ],
+    "max_projected_radius_m": 0.389124572939614
+  },
+  "planning_failures": [],
+  "routes": [
+    {
+      "track_id": 1,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 5.55999999999961,
+      "wall_seconds": 1.4342273040000002,
+      "goal_position": [
+        1.1500000000000001,
+        0.75
+      ],
+      "goal_yaw_rad": -0.41656088022814763,
+      "planned_standoff_m": 0.48718568793637856,
+      "planned_length_m": 0.43011626335213143,
+      "waypoints": [
+        [
+          0.8,
+          1.0
+        ],
+        [
+          1.1500000000000001,
+          0.75
+        ]
+      ],
+      "final_pose": [
+        1.0851698319426746,
+        0.7845284351020204,
+        -0.4987446518797876
+      ],
+      "final_position_error_m": 0.07345177683987986,
+      "final_heading_error_deg": 4.708783260105873,
+      "final_speed_m_s": 8.54201225390262e-05,
+      "min_grid_clearance_m": 0.6306601107616486,
+      "max_projected_robot_radius_m": 0.3896969252041425,
+      "max_roll_deg": 4.109738188005839,
+      "max_pitch_deg": 4.543686839036991,
+      "collision_geoms": [],
+      "shield_interventions": 0,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.07,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        0.8,
+        1.0,
+        0.0
+      ],
+      "class": "wrapper",
+      "item_position": [
+        1.5955244300173677,
+        0.5528759862732543,
+        0.007623308199451624
+      ],
+      "target_source": "Stage 4 CNN depth track"
+    }
+  ],
+  "diagnostics": [],
+  "routes_successful": 1,
+  "routes_attempted": 1,
+  "mapped_targets": 1,
+  "reachable_targets": 1,
+  "unreachable_targets": 0,
+  "total_wall_seconds": 5.412094566,
+  "remaining_scope": [
+    "live perception/map updates",
+    "continuous multi-item mission",
+    "PPO navigator",
+    "physical pickup"
+  ]
+}

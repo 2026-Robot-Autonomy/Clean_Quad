@@ -1,0 +1,30 @@
+{
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "models": [
+    {
+      "seed": 0,
+      "steps": 1001472,
+      "held_out_success_rate": 1.0,
+      "best_step": 660000,
+      "wall_seconds": 869.9884069710001
+    },
+    {
+      "seed": 1,
+      "steps": 1001472,
+      "held_out_success_rate": 1.0,
+      "best_step": 980000,
+      "wall_seconds": 808.8031921009999
+    },
+    {
+      "seed": 2,
+      "steps": 1001472,
+      "held_out_success_rate": 1.0,
+      "best_step": 920000,
+      "wall_seconds": 1382.591089256
+    }
+  ]
+}
