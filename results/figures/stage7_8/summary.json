@@ -1,0 +1,151 @@
+{
+  "pickup_trials": {
+    "passed": true,
+    "trials": 52,
+    "successful": 52,
+    "first_attempt_successes": 52,
+    "mean_tip_error_m": 0.03566342843666507,
+    "max_tip_error_m": 0.06708641075940741,
+    "mean_simulated_seconds": 12.85323076923186,
+    "by_class": {
+      "bottle": {
+        "trials": 15,
+        "successful": 15,
+        "first_attempt": 15
+      },
+      "can": {
+        "trials": 12,
+        "successful": 12,
+        "first_attempt": 12
+      },
+      "cup": {
+        "trials": 10,
+        "successful": 10,
+        "first_attempt": 10
+      },
+      "wrapper": {
+        "trials": 15,
+        "successful": 15,
+        "first_attempt": 15
+      }
+    },
+    "by_zone": {
+      "grass": {
+        "trials": 8,
+        "successful": 8,
+        "first_attempt": 8
+      },
+      "pavement": {
+        "trials": 8,
+        "successful": 8,
+        "first_attempt": 8
+      },
+      "plaza": {
+        "trials": 11,
+        "successful": 11,
+        "first_attempt": 11
+      },
+      "road": {
+        "trials": 25,
+        "successful": 25,
+        "first_attempt": 25
+      }
+    },
+    "by_scene": {
+      "0": {
+        "trials": 18,
+        "successful": 18,
+        "first_attempt": 18
+      },
+      "1": {
+        "trials": 17,
+        "successful": 17,
+        "first_attempt": 17
+      },
+      "2": {
+        "trials": 17,
+        "successful": 17,
+        "first_attempt": 17
+      }
+    }
+  },
+  "missions": {
+    "stage7": {
+      "mission_passed": true,
+      "checks": {
+        "all_reachable_litter_collected": true,
+        "map_collection_matches_simulator": true,
+        "hopper_emptied_into_bins": true,
+        "returned_to_base": true,
+        "no_unsafe_events": true,
+        "source_prior_map_unchanged": true
+      },
+      "collected_map_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        12
+      ],
+      "excluded": {
+        "9": "unreachable: no reachable litter approach pose within the standoff range"
+      },
+      "battery_min": -0.5470000002980697,
+      "battery_final": -0.5470000002980697,
+      "max_hopper_load": 7,
+      "pickups": 7,
+      "pickup_attempts": 7,
+      "total_simulated_seconds": 402.1880000011923,
+      "total_wall_seconds": 130.893093390001,
+      "dumps": 1,
+      "charges": 0,
+      "collected": 7,
+      "expected": 7
+    },
+    "stage8": {
+      "mission_passed": true,
+      "checks": {
+        "all_reachable_litter_collected": true,
+        "map_collection_matches_simulator": true,
+        "hopper_emptied_into_bins": true,
+        "returned_to_base": true,
+        "no_unsafe_events": true,
+        "source_prior_map_unchanged": true,
+        "hopper_capacity_respected": true,
+        "battery_never_empty": true
+      },
+      "collected_map_ids": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        10,
+        12
+      ],
+      "excluded": {
+        "9": "unreachable: no reachable litter approach pose within the standoff range",
+        "14": "not_found: no detection at the mapped position",
+        "13": "not_found: no detection at the mapped position"
+      },
+      "battery_min": 17.677999999788952,
+      "battery_final": 72.86399999987043,
+      "max_hopper_load": 3,
+      "pickups": 9,
+      "pickup_attempts": 9,
+      "total_simulated_seconds": 454.2960000014411,
+      "total_wall_seconds": 144.40153833000295,
+      "dumps": 3,
+      "charges": 1,
+      "collected": 7,
+      "expected": 7
+    }
+  },
+  "figures": [
+    "results/figures/stage7_8/battery_hopper.png",
+    "results/figures/stage7_8/mission_paths.png",
+    "results/figures/stage7_8/pickup_trials.png"
+  ]
+}

@@ -1,0 +1,3214 @@
+{
+  "routes": [
+    {
+      "track_id": 1,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 5.4619999999996205,
+      "wall_seconds": 2.331735611998738,
+      "goal_position": [
+        1.1500000000000001,
+        0.75
+      ],
+      "goal_yaw_rad": -0.41656088022814763,
+      "planned_standoff_m": 0.48718568793637856,
+      "planned_length_m": 0.43011626335213143,
+      "waypoints": [
+        [
+          0.8,
+          1.0
+        ],
+        [
+          1.1500000000000001,
+          0.75
+        ]
+      ],
+      "final_pose": [
+        1.102278361164736,
+        0.7696335896310719,
+        -0.4829994837686705
+      ],
+      "final_position_error_m": 0.05160264193745049,
+      "final_heading_error_deg": 3.8066515796149027,
+      "final_speed_m_s": 0.00030225303091658407,
+      "min_grid_clearance_m": 0.6313229077472081,
+      "max_projected_robot_radius_m": 0.389124572939614,
+      "max_roll_deg": 4.109738188005855,
+      "max_pitch_deg": 3.3777468994819615,
+      "collision_geoms": [],
+      "collision_examples": [],
+      "support_transition_contact_samples": 0,
+      "support_transition_examples": [],
+      "shield_interventions": 0,
+      "replanning_events": [],
+      "live_goal_updates": [],
+      "controller": "PPO",
+      "ppo_inference_calls": 45,
+      "reset_before_route": false,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.04,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        0.8,
+        1.0,
+        0.0
+      ],
+      "class": "wrapper",
+      "target_source": "prior CNN map, refined by online RGB-D/CNN tracks"
+    },
+    {
+      "track_id": 2,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 32.77000000000114,
+      "wall_seconds": 14.520433966001292,
+      "goal_position": [
+        5.050000000000001,
+        3.5500000000000003
+      ],
+      "goal_yaw_rad": 0.6955492473368144,
+      "planned_standoff_m": 0.5117797123542602,
+      "planned_length_m": 6.011635343879772,
+      "waypoints": [
+        [
+          1.102278361164736,
+          0.7696335896310719
+        ],
+        [
+          4.0,
+          0.9230778166569474
+        ],
+        [
+          4.0,
+          2.65
+        ],
+        [
+          5.050000000000001,
+          3.5500000000000003
+        ]
+      ],
+      "final_pose": [
+        4.992328268595373,
+        3.5077945012258795,
+        0.6047289814063135
+      ],
+      "final_position_error_m": 0.07146560522363055,
+      "final_heading_error_deg": 5.203617932073492,
+      "final_speed_m_s": 0.0003117470091503482,
+      "min_grid_clearance_m": 0.581136336010455,
+      "max_projected_robot_radius_m": 0.3882628714730992,
+      "max_roll_deg": 3.4400523409202544,
+      "max_pitch_deg": 11.217476739588987,
+      "collision_geoms": [],
+      "collision_examples": [],
+      "support_transition_contact_samples": 130,
+      "support_transition_examples": [
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.8971481809719712,
+            1.5740700363548277,
+            -0.0005337508779638608
+          ],
+          "normal": [
+            0.0,
+            0.8806641559376747,
+            -0.47374111542759617
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.897133649496482,
+            1.574572021095115,
+            -0.0007482983095265135
+          ],
+          "normal": [
+            0.0,
+            0.894140708698435,
+            -0.4477861018927011
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.8971152444079253,
+            1.574985162394663,
+            -0.0008917798342783466
+          ],
+          "normal": [
+            0.0,
+            0.9058761983668377,
+            -0.42354257546608665
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.897094871420796,
+            1.5753198783590976,
+            -0.0009846103671924886
+          ],
+          "normal": [
+            0.0,
+            0.9156003441166323,
+            -0.40208955451926975
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.8970735592943306,
+            1.5755841399071289,
+            -0.0010445184046439272
+          ],
+          "normal": [
+            0.0,
+            0.9230485405505645,
+            -0.3846834956005689
+          ]
+        }
+      ],
+      "shield_interventions": 0,
+      "replanning_events": [],
+      "live_goal_updates": [],
+      "controller": "PPO",
+      "ppo_inference_calls": 319,
+      "reset_before_route": false,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.04,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        1.102278361164736,
+        0.7696335896310719,
+        -0.4829994837686705
+      ],
+      "class": "bottle",
+      "target_source": "prior CNN map, refined by online RGB-D/CNN tracks"
+    },
+    {
+      "track_id": 3,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 34.74600000001056,
+      "wall_seconds": 15.326207687998249,
+      "goal_position": [
+        4.65,
+        1.35
+      ],
+      "goal_yaw_rad": 0.5531864150018758,
+      "planned_standoff_m": 0.48307059388340523,
+      "planned_length_m": 3.8162755191480295,
+      "waypoints": [
+        [
+          4.992328268595373,
+          3.5077945012258795
+        ],
+        [
+          4.0,
+          2.65
+        ],
+        [
+          4.0,
+          0.9230778166569474
+        ],
+        [
+          4.65,
+          1.35
+        ]
+      ],
+      "final_pose": [
+        4.603070686879346,
+        1.3147861031477357,
+        0.5993878431945142
+      ],
+      "final_position_error_m": 0.0586717901678339,
+      "final_heading_error_deg": 2.647146842914928,
+      "final_speed_m_s": 0.0004866315314405659,
+      "min_grid_clearance_m": 0.5565672293589216,
+      "max_projected_robot_radius_m": 0.398189999329612,
+      "max_roll_deg": 3.169961530249978,
+      "max_pitch_deg": 8.558232081228347,
+      "collision_geoms": [],
+      "collision_examples": [],
+      "support_transition_contact_samples": 182,
+      "support_transition_examples": [
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 50,
+          "robot_body": "FR_calf",
+          "position": [
+            4.999920875694794,
+            3.2501298998483805,
+            0.059955884899761724
+          ],
+          "normal": [
+            -0.8734198228493477,
+            0.0,
+            -0.48696797949538156
+          ]
+        },
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 50,
+          "robot_body": "FR_calf",
+          "position": [
+            4.9996420463606235,
+            3.2502011763018848,
+            0.05983063965639858
+          ],
+          "normal": [
+            -0.9039298629095831,
+            0.0,
+            -0.4276807254720076
+          ]
+        },
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 50,
+          "robot_body": "FR_calf",
+          "position": [
+            4.999422652159019,
+            3.2502572790547974,
+            0.059766436589612545
+          ],
+          "normal": [
+            -0.9270166002048472,
+            0.0,
+            -0.3750202967102538
+          ]
+        },
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 50,
+          "robot_body": "FR_calf",
+          "position": [
+            4.999253181967127,
+            3.250301516211472,
+            0.059738932164163164
+          ],
+          "normal": [
+            -0.9439838067240441,
+            0.0,
+            -0.3299917766290283
+          ]
+        },
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 50,
+          "robot_body": "FR_calf",
+          "position": [
+            4.999123634402363,
+            3.2503368636192995,
+            0.05973108067844761
+          ],
+          "normal": [
+            -0.9560030661439692,
+            0.0,
+            -0.2933566728801812
+          ]
+        }
+      ],
+      "shield_interventions": 0,
+      "replanning_events": [],
+      "live_goal_updates": [],
+      "controller": "PPO",
+      "ppo_inference_calls": 339,
+      "reset_before_route": false,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.04,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        4.992328268595373,
+        3.5077945012258795,
+        0.6047289814063135
+      ],
+      "class": "bottle",
+      "target_source": "prior CNN map, refined by online RGB-D/CNN tracks"
+    },
+    {
+      "track_id": 4,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 37.40199999991283,
+      "wall_seconds": 16.72207744499974,
+      "goal_position": [
+        4.75,
+        3.85
+      ],
+      "goal_yaw_rad": 1.3827124254067868,
+      "planned_standoff_m": 0.5092221920513502,
+      "planned_length_m": 3.861136614158867,
+      "waypoints": [
+        [
+          4.603070686879346,
+          1.3147861031477357
+        ],
+        [
+          4.0,
+          0.9230778166569474
+        ],
+        [
+          4.0,
+          2.65
+        ],
+        [
+          4.75,
+          3.85
+        ]
+      ],
+      "final_pose": [
+        4.7228728330767185,
+        3.7985577266005017,
+        1.2823571322625515
+      ],
+      "final_position_error_m": 0.058156604764999106,
+      "final_heading_error_deg": 5.74993474896286,
+      "final_speed_m_s": 0.00012570778737513343,
+      "min_grid_clearance_m": 0.5684763279955022,
+      "max_projected_robot_radius_m": 0.38870099929331275,
+      "max_roll_deg": 3.6157103602846945,
+      "max_pitch_deg": 10.940697914862993,
+      "collision_geoms": [],
+      "collision_examples": [],
+      "support_transition_contact_samples": 109,
+      "support_transition_examples": [
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 81,
+          "robot_body": "RL_calf",
+          "position": [
+            3.8544801675567184,
+            1.5756603454127607,
+            -0.0013428852933880311
+          ],
+          "normal": [
+            0.0,
+            0.8872209719592277,
+            -0.4613447159291236
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 81,
+          "robot_body": "RL_calf",
+          "position": [
+            3.8543017482953914,
+            1.576739637458025,
+            -0.0016153292911476082
+          ],
+          "normal": [
+            0.0,
+            0.9149343992000579,
+            -0.4036025831934544
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 80,
+          "robot_body": "RL_calf",
+          "position": [
+            3.8541446098346475,
+            1.5729481267466208,
+            4.6906294980400554e-05
+          ],
+          "normal": [
+            0.0,
+            0.9403827694675922,
+            -0.34011798965720946
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 81,
+          "robot_body": "RL_calf",
+          "position": [
+            3.8541446098346475,
+            1.5776500405939586,
+            -0.0016536836533055863
+          ],
+          "normal": [
+            0.0,
+            0.9403827694675942,
+            -0.34011798965720325
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 80,
+          "robot_body": "RL_calf",
+          "position": [
+            3.8540064477201263,
+            1.573580734218806,
+            -0.00014429478277633648
+          ],
+          "normal": [
+            0.0,
+            0.9612183895555113,
+            -0.2757883383689556
+          ]
+        }
+      ],
+      "shield_interventions": 0,
+      "replanning_events": [],
+      "live_goal_updates": [],
+      "controller": "PPO",
+      "ppo_inference_calls": 365,
+      "reset_before_route": false,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.04,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        4.603070686879346,
+        1.3147861031477357,
+        0.5993878431945142
+      ],
+      "class": "can",
+      "target_source": "prior CNN map, refined by online RGB-D/CNN tracks"
+    },
+    {
+      "track_id": 5,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 34.47200000003939,
+      "wall_seconds": 15.218496812001831,
+      "goal_position": [
+        5.75,
+        1.35
+      ],
+      "goal_yaw_rad": 0.15980568962772848,
+      "planned_standoff_m": 0.49716237547859893,
+      "planned_length_m": 4.885348155698467,
+      "waypoints": [
+        [
+          4.7228728330767185,
+          3.7985577266005017
+        ],
+        [
+          4.0,
+          2.65
+        ],
+        [
+          4.0,
+          0.9230778166569474
+        ],
+        [
+          5.75,
+          1.35
+        ]
+      ],
+      "final_pose": [
+        5.680044113055324,
+        1.3310631604118304,
+        0.26255415848590086
+      ],
+      "final_position_error_m": 0.07247365046556149,
+      "final_heading_error_deg": 5.887053617004648,
+      "final_speed_m_s": 0.00017020835549507788,
+      "min_grid_clearance_m": 0.5556464782629411,
+      "max_projected_robot_radius_m": 0.39802183941104,
+      "max_roll_deg": 3.013735417901022,
+      "max_pitch_deg": 8.193192760565069,
+      "collision_geoms": [],
+      "collision_examples": [],
+      "support_transition_contact_samples": 113,
+      "support_transition_examples": [
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 80,
+          "robot_body": "RL_calf",
+          "position": [
+            4.469413257755821,
+            3.201270852684717,
+            0.059370713031087666
+          ],
+          "normal": [
+            0.0,
+            0.8961521773353688,
+            -0.44374685920812745
+          ]
+        },
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 81,
+          "robot_body": "RL_calf",
+          "position": [
+            4.469413257755822,
+            3.205751613571394,
+            0.05715197873504703
+          ],
+          "normal": [
+            0.0,
+            0.8961521773353697,
+            -0.44374685920812595
+          ]
+        },
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 80,
+          "robot_body": "RL_calf",
+          "position": [
+            4.469195587736737,
+            3.2011530256661027,
+            0.0595956941831433
+          ],
+          "normal": [
+            0.0,
+            0.9436676156221891,
+            -0.33089489452986787
+          ]
+        },
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 81,
+          "robot_body": "RL_calf",
+          "position": [
+            4.469195587736737,
+            3.2058713637442136,
+            0.05794121971049396
+          ],
+          "normal": [
+            0.0,
+            0.9436676156221886,
+            -0.3308948945298695
+          ]
+        },
+        {
+          "world_geom": "terrain_grass",
+          "robot_geom": 80,
+          "robot_body": "RL_calf",
+          "position": [
+            4.469032120795926,
+            3.2009364026119913,
+            0.059743643336792454
+          ],
+          "normal": [
+            0.0,
+            0.9645086673030079,
+            -0.2640511895397853
+          ]
+        }
+      ],
+      "shield_interventions": 0,
+      "replanning_events": [],
+      "live_goal_updates": [],
+      "controller": "PPO",
+      "ppo_inference_calls": 337,
+      "reset_before_route": false,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.04,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        4.7228728330767185,
+        3.7985577266005017,
+        1.2823571322625515
+      ],
+      "class": "can",
+      "target_source": "prior CNN map, refined by online RGB-D/CNN tracks"
+    },
+    {
+      "track_id": 10,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 47.33400000022601,
+      "wall_seconds": 21.14204772299854,
+      "goal_position": [
+        1.35,
+        3.6500000000000004
+      ],
+      "goal_yaw_rad": 2.2999947126812295,
+      "planned_standoff_m": 0.5115932210471198,
+      "planned_length_m": 6.38118129132741,
+      "waypoints": [
+        [
+          5.680044113055324,
+          1.3310631604118304
+        ],
+        [
+          4.0,
+          0.9230778166569474
+        ],
+        [
+          4.0,
+          2.65
+        ],
+        [
+          1.6500000000000001,
+          3.25
+        ],
+        [
+          1.35,
+          3.6500000000000004
+        ]
+      ],
+      "final_pose": [
+        1.3894639817095555,
+        3.598517495905835,
+        2.199083900206955
+      ],
+      "final_position_error_m": 0.06486797422594527,
+      "final_heading_error_deg": 5.781763662012021,
+      "final_speed_m_s": 0.00013138119741399847,
+      "min_grid_clearance_m": 0.5421717642940391,
+      "max_projected_robot_radius_m": 0.3882809147015185,
+      "max_roll_deg": 3.609405604738834,
+      "max_pitch_deg": 10.8736820323946,
+      "collision_geoms": [],
+      "collision_examples": [],
+      "support_transition_contact_samples": 265,
+      "support_transition_examples": [
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.8556401824722504,
+            1.9992904092952695,
+            0.059612689547367315
+          ],
+          "normal": [
+            0.0,
+            -0.8777598267233278,
+            -0.4791009148296774
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.8557135491936343,
+            1.9993675264118214,
+            0.05968152328207796
+          ],
+          "normal": [
+            0.0,
+            -0.8931583526771736,
+            -0.4497423229394783
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.855772558569188,
+            1.9994390831856264,
+            0.059735753335742756
+          ],
+          "normal": [
+            0.0,
+            -0.9046410328484197,
+            -0.42617437943516095
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.8558208665517966,
+            1.9995039249320457,
+            0.059778554364024336
+          ],
+          "normal": [
+            0.0,
+            -0.9131491522551776,
+            -0.40762559504482887
+          ]
+        },
+        {
+          "world_geom": "terrain_ramp",
+          "robot_geom": 61,
+          "robot_body": "FL_calf",
+          "position": [
+            3.8558611395292797,
+            1.999562178046896,
+            0.05981261296793772
+          ],
+          "normal": [
+            0.0,
+            -0.9193357103451544,
+            -0.39347408006649
+          ]
+        }
+      ],
+      "shield_interventions": 0,
+      "replanning_events": [],
+      "live_goal_updates": [],
+      "controller": "PPO",
+      "ppo_inference_calls": 466,
+      "reset_before_route": false,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.04,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        5.680044113055324,
+        1.3310631604118304,
+        0.26255415848590086
+      ],
+      "class": "wrapper",
+      "target_source": "prior CNN map, refined by online RGB-D/CNN tracks"
+    },
+    {
+      "track_id": 12,
+      "status": "success",
+      "success": true,
+      "simulated_seconds": 10.12600000004835,
+      "wall_seconds": 4.45052363799914,
+      "goal_position": [
+        1.35,
+        3.25
+      ],
+      "goal_yaw_rad": -1.7545772544935776,
+      "planned_standoff_m": 0.5624889382177629,
+      "planned_length_m": 0.3507447088764786,
+      "waypoints": [
+        [
+          1.3894639817095555,
+          3.598517495905835
+        ],
+        [
+          1.35,
+          3.25
+        ]
+      ],
+      "final_pose": [
+        1.3510033354992432,
+        3.313816126148227,
+        -1.6613367493462154
+      ],
+      "final_position_error_m": 0.06382401302558836,
+      "final_heading_error_deg": 5.3422874246116665,
+      "final_speed_m_s": 0.0001705165422688421,
+      "min_grid_clearance_m": 0.6133018647523306,
+      "max_projected_robot_radius_m": 0.3870161946339926,
+      "max_roll_deg": 3.019162903215361,
+      "max_pitch_deg": 2.230678444731235,
+      "collision_geoms": [],
+      "collision_examples": [],
+      "support_transition_contact_samples": 0,
+      "support_transition_examples": [],
+      "shield_interventions": 0,
+      "replanning_events": [],
+      "live_goal_updates": [],
+      "controller": "PPO",
+      "ppo_inference_calls": 94,
+      "reset_before_route": false,
+      "follower_config": {
+        "forward_speed": 0.3,
+        "near_speed": 0.1,
+        "yaw_rate": 0.3,
+        "waypoint_tolerance": 0.04,
+        "goal_tolerance": 0.08,
+        "start_turn": 0.20943951023931956,
+        "stop_turn": 0.05235987755982989,
+        "heading_tolerance": 0.10471975511965978
+      },
+      "control_hz": 10.0,
+      "start_pose": [
+        1.3894639817095555,
+        3.598517495905835,
+        2.199083900206955
+      ],
+      "class": "cup",
+      "target_source": "prior CNN map, refined by online RGB-D/CNN tracks"
+    }
+  ],
+  "unreachable": [
+    {
+      "track_id": 9,
+      "reason": "no reachable litter approach pose within the standoff range"
+    }
+  ],
+  "stats": {
+    "frames": 203,
+    "detections": 349,
+    "localization_observations": 342,
+    "detector_seconds": 9.718599576990528,
+    "render_seconds": 12.139598802958062,
+    "updates": [
+      {
+        "time": 0.0,
+        "detections": 4,
+        "confirmed_tracks": 0,
+        "map_records_updated": 0,
+        "robot_pose": [
+          0.8,
+          1.0,
+          0.0
+        ]
+      },
+      {
+        "time": 1.0000000000000007,
+        "detections": 3,
+        "confirmed_tracks": 0,
+        "map_records_updated": 0,
+        "robot_pose": [
+          0.7358484793673498,
+          1.0105017524879076,
+          -0.15406134090184728
+        ]
+      },
+      {
+        "time": 2.0000000000000013,
+        "detections": 3,
+        "confirmed_tracks": 3,
+        "map_records_updated": 3,
+        "robot_pose": [
+          0.7938555118194872,
+          0.9746460773147178,
+          -0.4516669935106714
+        ]
+      },
+      {
+        "time": 3.001999999999891,
+        "detections": 2,
+        "confirmed_tracks": 3,
+        "map_records_updated": 3,
+        "robot_pose": [
+          0.9805718759175345,
+          0.8675791993556845,
+          -0.5317206080280139
+        ]
+      },
+      {
+        "time": 4.001999999999781,
+        "detections": 2,
+        "confirmed_tracks": 3,
+        "map_records_updated": 3,
+        "robot_pose": [
+          1.083099523903216,
+          0.7955243681972288,
+          -0.5709470133159262
+        ]
+      },
+      {
+        "time": 5.001999999999671,
+        "detections": 3,
+        "confirmed_tracks": 3,
+        "map_records_updated": 3,
+        "robot_pose": [
+          1.1021428694989666,
+          0.7696893911880294,
+          -0.4827878063459695
+        ]
+      },
+      {
+        "time": 6.001999999999561,
+        "detections": 3,
+        "confirmed_tracks": 3,
+        "map_records_updated": 3,
+        "robot_pose": [
+          1.0893802500079632,
+          0.7786848736593547,
+          -0.439681156309834
+        ]
+      },
+      {
+        "time": 7.001999999999451,
+        "detections": 4,
+        "confirmed_tracks": 3,
+        "map_records_updated": 3,
+        "robot_pose": [
+          1.0897833224523106,
+          0.7708901217528716,
+          -0.06835093344652621
+        ]
+      },
+      {
+        "time": 8.001999999999342,
+        "detections": 3,
+        "confirmed_tracks": 3,
+        "map_records_updated": 3,
+        "robot_pose": [
+          1.3602873752986613,
+          0.7678033965541848,
+          0.0583503756990684
+        ]
+      },
+      {
+        "time": 9.001999999999676,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.6609888848001746,
+          0.7811948268657334,
+          0.08832860778456726
+        ]
+      },
+      {
+        "time": 10.000000000000009,
+        "detections": 4,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          1.9607127563266136,
+          0.802238840332308,
+          0.10314776808164101
+        ]
+      },
+      {
+        "time": 11.000000000000343,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          2.2585587574045265,
+          0.8218976031715184,
+          0.109535061556905
+        ]
+      },
+      {
+        "time": 12.000000000000677,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          2.5575331010651663,
+          0.8465577588231403,
+          0.10519426446179454
+        ]
+      },
+      {
+        "time": 13.00000000000101,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          2.85549415365282,
+          0.8690613602248455,
+          0.10093317754914509
+        ]
+      },
+      {
+        "time": 14.000000000001345,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          3.1535216725029604,
+          0.889323055554692,
+          0.09401951638507251
+        ]
+      },
+      {
+        "time": 15.000000000001679,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          3.451977422915668,
+          0.9080523161115268,
+          0.0815907247737889
+        ]
+      },
+      {
+        "time": 16.00000000000201,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          3.728627087453498,
+          0.9205366293014454,
+          0.06088080356306433
+        ]
+      },
+      {
+        "time": 17.000000000001457,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          3.9002322888634984,
+          0.9229573828240194,
+          0.03299095327197147
+        ]
+      },
+      {
+        "time": 18.000000000000902,
+        "detections": 2,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          3.9751959272236417,
+          0.9026512013642949,
+          0.16320557656544893
+        ]
+      },
+      {
+        "time": 19.000000000000348,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          3.9818192010280007,
+          0.9015652910687104,
+          0.479691482593959
+        ]
+      },
+      {
+        "time": 20.001999999999793,
+        "detections": 4,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          3.9892706221285232,
+          0.9009340547291995,
+          0.7897103340874077
+        ]
+      },
+      {
+        "time": 21.00199999999924,
+        "detections": 3,
+        "confirmed_tracks": 4,
+        "map_records_updated": 4,
+        "robot_pose": [
+          3.997543377714496,
+          0.9013160007638238,
+          1.093703135293719
+        ]
+      },
+      {
+        "time": 22.001999999998684,
+        "detections": 2,
+        "confirmed_tracks": 5,
+        "map_records_updated": 5,
+        "robot_pose": [
+          4.016350001778376,
+          0.932395168118533,
+          1.4226043330887315
+        ]
+      },
+      {
+        "time": 23.00199999999813,
+        "detections": 3,
+        "confirmed_tracks": 5,
+        "map_records_updated": 5,
+        "robot_pose": [
+          4.034866605101218,
+          1.196463998295902,
+          1.5728701649386339
+        ]
+      },
+      {
+        "time": 24.001999999997576,
+        "detections": 3,
+        "confirmed_tracks": 5,
+        "map_records_updated": 5,
+        "robot_pose": [
+          4.033578761559669,
+          1.4711565882075364,
+          1.62263713196341
+        ]
+      },
+      {
+        "time": 25.00199999999702,
+        "detections": 3,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.030649735082778,
+          1.6634890773544668,
+          1.6465838365856933
+        ]
+      },
+      {
+        "time": 26.001999999996467,
+        "detections": 3,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.0228044657965505,
+          1.8325262911244316,
+          1.6386838441288814
+        ]
+      },
+      {
+        "time": 27.001999999995913,
+        "detections": 3,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.010448536128948,
+          2.0888388124034516,
+          1.6311546465620679
+        ]
+      },
+      {
+        "time": 28.00199999999536,
+        "detections": 2,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.001602469472396,
+          2.371774003658514,
+          1.6308963052004697
+        ]
+      },
+      {
+        "time": 29.001999999994805,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          3.9997698166453297,
+          2.5517974103754293,
+          1.6042434711284796
+        ]
+      },
+      {
+        "time": 30.00199999999425,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          3.9916071692140416,
+          2.6333568708609256,
+          1.4949254188854157
+        ]
+      },
+      {
+        "time": 31.001999999993696,
+        "detections": 2,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          3.9906772608917835,
+          2.630637130959008,
+          1.1874417010268985
+        ]
+      },
+      {
+        "time": 32.001999999993146,
+        "detections": 2,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.021508916226534,
+          2.668576283621411,
+          0.8822197598439637
+        ]
+      },
+      {
+        "time": 33.00199999999437,
+        "detections": 3,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.215795000741627,
+          2.859163614358715,
+          0.7841902500792792
+        ]
+      },
+      {
+        "time": 34.00199999999559,
+        "detections": 3,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.435585012087507,
+          3.0544336816250346,
+          0.7562618244823016
+        ]
+      },
+      {
+        "time": 35.00199999999681,
+        "detections": 2,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.660953929597788,
+          3.2511947364647362,
+          0.7250653175335255
+        ]
+      },
+      {
+        "time": 36.001999999998034,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.8517711783221875,
+          3.408603916458837,
+          0.686281261075499
+        ]
+      },
+      {
+        "time": 37.001999999999256,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.962788251751182,
+          3.4889533627145477,
+          0.6550057669445938
+        ]
+      },
+      {
+        "time": 38.000000000000476,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.992232488441271,
+          3.507718325207312,
+          0.6047072891345908
+        ]
+      },
+      {
+        "time": 39.0000000000017,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.95424564692787,
+          3.491468397872811,
+          0.5705171253980269
+        ]
+      },
+      {
+        "time": 40.00000000000292,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.942188346973633,
+          3.4849275208692525,
+          0.2502816155791716
+        ]
+      },
+      {
+        "time": 41.00000000000414,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.942292412480929,
+          3.479961082537934,
+          -0.06093830027616142
+        ]
+      },
+      {
+        "time": 42.000000000005365,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.941309431917247,
+          3.4759064997120586,
+          -0.3654865881360273
+        ]
+      },
+      {
+        "time": 43.00000000000659,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.93887244158622,
+          3.472925966173916,
+          -0.6690335711418017
+        ]
+      },
+      {
+        "time": 44.00000000000781,
+        "detections": 2,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.9356397634288225,
+          3.4701463840607425,
+          -0.9694846843986044
+        ]
+      },
+      {
+        "time": 45.00000000000903,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.926723749913473,
+          3.4691982167698647,
+          -1.2487417319192324
+        ]
+      },
+      {
+        "time": 46.00000000001025,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.925604031565179,
+          3.468240944634465,
+          -1.5646635555401747
+        ]
+      },
+      {
+        "time": 47.000000000011475,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.921320788644828,
+          3.4695398340862775,
+          -1.871375407771818
+        ]
+      },
+      {
+        "time": 48.0000000000127,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.91477932602274,
+          3.4678080160948213,
+          -2.1730909702990298
+        ]
+      },
+      {
+        "time": 49.00000000001392,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.756671308820722,
+          3.293522192411674,
+          -2.34056076643154
+        ]
+      },
+      {
+        "time": 50.00000000001514,
+        "detections": 1,
+        "confirmed_tracks": 6,
+        "map_records_updated": 6,
+        "robot_pose": [
+          4.539518403978207,
+          3.092953915138452,
+          -2.378721394152933
+        ]
+      },
+      {
+        "time": 51.000000000016364,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.321391069712754,
+          2.902592752036033,
+          -2.404136685396491
+        ]
+      },
+      {
+        "time": 52.000000000017586,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.158468988877987,
+          2.7688384933564665,
+          -2.449803744089226
+        ]
+      },
+      {
+        "time": 53.00000000001881,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.061037433264659,
+          2.6970741815703896,
+          -2.467138868745726
+        ]
+      },
+      {
+        "time": 54.00000000002003,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.000416327909968,
+          2.6824025568465744,
+          -2.2834036064711296
+        ]
+      },
+      {
+        "time": 55.00000000002125,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.997165933023586,
+          2.677878027321697,
+          -1.9606479135039512
+        ]
+      },
+      {
+        "time": 56.000000000022474,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.97370098936957,
+          2.585802367222273,
+          -1.6517631180729422
+        ]
+      },
+      {
+        "time": 57.0000000000237,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.96061623451627,
+          2.291551820477002,
+          -1.5587925538740377
+        ]
+      },
+      {
+        "time": 58.00000000002492,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9580785641311036,
+          1.9341408895409602,
+          -1.5230940098431267
+        ]
+      },
+      {
+        "time": 59.00000000002614,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9674430323772474,
+          1.5411380954304872,
+          -1.520039785554497
+        ]
+      },
+      {
+        "time": 60.00000000002736,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.974897798187633,
+          1.2669676873803088,
+          -1.4818964654573719
+        ]
+      },
+      {
+        "time": 61.000000000028585,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9867107238111585,
+          1.0893560784341887,
+          -1.4688068137271648
+        ]
+      },
+      {
+        "time": 62.00000000002981,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9935947158248903,
+          0.9851020746795893,
+          -1.4614154496597327
+        ]
+      },
+      {
+        "time": 63.00000000003103,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.976451053746719,
+          0.9443338930247902,
+          -1.2254002144639882
+        ]
+      },
+      {
+        "time": 64.00000000003224,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9763838020039657,
+          0.9378502377259215,
+          -0.9055451855023373
+        ]
+      },
+      {
+        "time": 65.00000000002991,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.975520764252644,
+          0.9292094172720862,
+          -0.5973246359550539
+        ]
+      },
+      {
+        "time": 66.00000000002758,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9772339877977325,
+          0.9210594604953131,
+          -0.2938331147010087
+        ]
+      },
+      {
+        "time": 67.00000000002525,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.981160317657246,
+          0.9136099634637388,
+          0.007536130030832387
+        ]
+      },
+      {
+        "time": 68.00000000002292,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9871440537115013,
+          0.9075455890979359,
+          0.3099371368937558
+        ]
+      },
+      {
+        "time": 69.00000000002059,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.144258336789907,
+          0.9817064757926593,
+          0.571460852670105
+        ]
+      },
+      {
+        "time": 70.00000000001826,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.391554034182726,
+          1.1453446770963411,
+          0.6553900804619923
+        ]
+      },
+      {
+        "time": 71.00000000001593,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.542584157154297,
+          1.2565482028418777,
+          0.7041948762341788
+        ]
+      },
+      {
+        "time": 72.0000000000136,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.60248125538966,
+          1.3140713119481258,
+          0.6699795640785053
+        ]
+      },
+      {
+        "time": 73.00000000001127,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.6030613608325055,
+          1.314781674383147,
+          0.5993995433700422
+        ]
+      },
+      {
+        "time": 74.00000000000894,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.571828643488618,
+          1.2790674441000418,
+          0.7613984988935372
+        ]
+      },
+      {
+        "time": 75.00000000000661,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.5807077445068725,
+          1.2783586308238266,
+          1.0857001916144229
+        ]
+      },
+      {
+        "time": 76.00000000000428,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.58748328526888,
+          1.282068520830138,
+          1.3949975921129394
+        ]
+      },
+      {
+        "time": 77.00000000000195,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.594086357782068,
+          1.2872192733648549,
+          1.699057011158474
+        ]
+      },
+      {
+        "time": 78.00199999999961,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.5991022603567275,
+          1.2939018051147795,
+          2.001719636492539
+        ]
+      },
+      {
+        "time": 79.00199999999728,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.602120441770818,
+          1.3017564520724296,
+          2.3025524235915587
+        ]
+      },
+      {
+        "time": 80.00199999999495,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.602726060069932,
+          1.3101655394159084,
+          2.6028552212187783
+        ]
+      },
+      {
+        "time": 81.00199999999262,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.600833000259098,
+          1.3183859121042467,
+          2.902964884432841
+        ]
+      },
+      {
+        "time": 82.00199999999029,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.596599269021372,
+          1.3256841974624665,
+          -3.0801807221458244
+        ]
+      },
+      {
+        "time": 83.00199999998796,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.5904130098294464,
+          1.3313780843079415,
+          -2.7794893022789484
+        ]
+      },
+      {
+        "time": 84.00199999998563,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.4252328544709725,
+          1.2432090404660059,
+          -2.543376786651246
+        ]
+      },
+      {
+        "time": 85.0019999999833,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.205524470368216,
+          1.0934384955198535,
+          -2.4623922553085533
+        ]
+      },
+      {
+        "time": 86.00199999998097,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.086484004903745,
+          1.0030932393442529,
+          -2.4097542782961625
+        ]
+      },
+      {
+        "time": 87.00199999997864,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.019375806361795,
+          0.9520346581336273,
+          -2.3343776656474122
+        ]
+      },
+      {
+        "time": 88.0019999999763,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.022948284144963,
+          0.9362701747456571,
+          -2.633284873927748
+        ]
+      },
+      {
+        "time": 89.00199999997398,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.021822329033629,
+          0.9370441237653407,
+          -2.941919582406916
+        ]
+      },
+      {
+        "time": 90.00199999997164,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.021098539359137,
+          0.9403454910367434,
+          3.0382632964716114
+        ]
+      },
+      {
+        "time": 91.00199999996931,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.020918240190416,
+          0.9434376406030227,
+          2.7366573909150747
+        ]
+      },
+      {
+        "time": 92.00199999996698,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.021600570992697,
+          0.9463381801120129,
+          2.4360271742305315
+        ]
+      },
+      {
+        "time": 93.00199999996465,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.023090601853612,
+          0.9488830767608941,
+          2.1357853974114493
+        ]
+      },
+      {
+        "time": 94.00199999996232,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.025068017507553,
+          0.9517231024460605,
+          1.8345084938848553
+        ]
+      },
+      {
+        "time": 95.00199999995999,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.004880814292313,
+          1.1738303772279717,
+          1.6689625854260695
+        ]
+      },
+      {
+        "time": 96.00199999995766,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.99227123119656,
+          1.4520044109380381,
+          1.6204736663226063
+        ]
+      },
+      {
+        "time": 97.00199999995533,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.990167396507589,
+          1.6472265640082013,
+          1.620565182162437
+        ]
+      },
+      {
+        "time": 98.001999999953,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.990492794696105,
+          1.821652331865738,
+          1.5984823368615522
+        ]
+      },
+      {
+        "time": 99.00199999995067,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.991150139821625,
+          2.0762195115335347,
+          1.595124068738416
+        ]
+      },
+      {
+        "time": 100.00199999994834,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9927286481436357,
+          2.369678304172141,
+          1.606354182234679
+        ]
+      },
+      {
+        "time": 101.00199999994601,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.995468825190471,
+          2.5541835087050644,
+          1.5744926222866806
+        ]
+      },
+      {
+        "time": 102.00199999994368,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9850924332646596,
+          2.6277299079000302,
+          1.4195452346629442
+        ]
+      },
+      {
+        "time": 103.00199999994135,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.021764316021318,
+          2.69581234108466,
+          1.1413267257073965
+        ]
+      },
+      {
+        "time": 104.00199999993902,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.162422130352636,
+          2.944216399877677,
+          1.0785407796519886
+        ]
+      },
+      {
+        "time": 105.00199999993669,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.316410287450474,
+          3.197972892025285,
+          1.055363557739971
+        ]
+      },
+      {
+        "time": 106.00199999993436,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.4719834697400564,
+          3.4519991371082392,
+          1.0253379994466276
+        ]
+      },
+      {
+        "time": 107.00199999993202,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.608737236282379,
+          3.658987644226112,
+          0.993142957857099
+        ]
+      },
+      {
+        "time": 108.0019999999297,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.685933794519887,
+          3.7654610932590624,
+          0.9608417339464317
+        ]
+      },
+      {
+        "time": 109.00199999992736,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.729323997344219,
+          3.787923649791904,
+          1.1516822382004135
+        ]
+      },
+      {
+        "time": 110.00199999992503,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.722976491933006,
+          3.798600675624308,
+          1.2819749604665012
+        ]
+      },
+      {
+        "time": 111.0019999999227,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.712187075831444,
+          3.776315965295474,
+          1.3008005943835224
+        ]
+      },
+      {
+        "time": 112.00199999992037,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.727800079188505,
+          3.7542379547359817,
+          1.7451522079534771
+        ]
+      },
+      {
+        "time": 113.00199999991804,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.730815385087808,
+          3.7600446879807974,
+          2.0978629776966673
+        ]
+      },
+      {
+        "time": 114.00199999991571,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.733701996350093,
+          3.7667780657497003,
+          2.41769950903249
+        ]
+      },
+      {
+        "time": 115.00199999991338,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.734956841252506,
+          3.774518939526942,
+          2.7236923456975175
+        ]
+      },
+      {
+        "time": 116.00199999991105,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.733873709180025,
+          3.782454148467342,
+          3.0255950934944957
+        ]
+      },
+      {
+        "time": 117.00199999990872,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.730520657294162,
+          3.7897992196620374,
+          -2.9569083729757413
+        ]
+      },
+      {
+        "time": 118.00199999990639,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.725143722421282,
+          3.79586000586147,
+          -2.656660021450728
+        ]
+      },
+      {
+        "time": 119.00199999990406,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.706597498485577,
+          3.793018647385475,
+          -2.3380199368773544
+        ]
+      },
+      {
+        "time": 120.00199999990173,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.554012336255253,
+          3.592189195184302,
+          -2.156486691313401
+        ]
+      },
+      {
+        "time": 121.0019999998994,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.395865941522588,
+          3.3347214625872486,
+          -2.098522130447934
+        ]
+      },
+      {
+        "time": 122.00199999989707,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.249530568357704,
+          3.0731848753540896,
+          -2.0902121693891127
+        ]
+      },
+      {
+        "time": 123.00199999989474,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.1334666521427605,
+          2.8657699094152456,
+          -2.1014384934429655
+        ]
+      },
+      {
+        "time": 124.0019999998924,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.062956256229382,
+          2.74904393136409,
+          -2.135715864869565
+        ]
+      },
+      {
+        "time": 125.00199999989007,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.015384067245434,
+          2.68410606397917,
+          -2.114450790077173
+        ]
+      },
+      {
+        "time": 126.00199999988774,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9870335732783997,
+          2.6571201751587616,
+          -1.7635495847655926
+        ]
+      },
+      {
+        "time": 127.00199999988541,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.961804801860857,
+          2.394881691701259,
+          -1.6108586122735238
+        ]
+      },
+      {
+        "time": 128.00199999988308,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9594580982569805,
+          2.074072780090046,
+          -1.562517090512046
+        ]
+      },
+      {
+        "time": 129.00199999988786,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9619119192489824,
+          1.6465636738249916,
+          -1.52718806997527
+        ]
+      },
+      {
+        "time": 130.00199999989263,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9761289118961174,
+          1.3513819817638613,
+          -1.537638067808138
+        ]
+      },
+      {
+        "time": 131.0019999998974,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9896975299788355,
+          1.132220474526693,
+          -1.5131847101415261
+        ]
+      },
+      {
+        "time": 132.00199999990218,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9961246049226338,
+          1.0076290686030973,
+          -1.5255117992880551
+        ]
+      },
+      {
+        "time": 133.00199999990696,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9774373418802593,
+          0.946259918772754,
+          -1.3615697019672839
+        ]
+      },
+      {
+        "time": 134.00199999991173,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.978755248510016,
+          0.9420317181891343,
+          -1.0462108798863798
+        ]
+      },
+      {
+        "time": 135.0019999999165,
+        "detections": 0,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.977759157728623,
+          0.9339940499272953,
+          -0.7363663176340751
+        ]
+      },
+      {
+        "time": 136.00199999992128,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.978273778978032,
+          0.9256031924506675,
+          -0.43214814580871896
+        ]
+      },
+      {
+        "time": 137.00199999992606,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.981021727308177,
+          0.9176444285673936,
+          -0.1300277323275298
+        ]
+      },
+      {
+        "time": 138.00199999993083,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.125265696858361,
+          0.9246093382354664,
+          0.1477751938546275
+        ]
+      },
+      {
+        "time": 139.0019999999356,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.419199525917879,
+          0.9827398447953735,
+          0.22891901714046747
+        ]
+      },
+      {
+        "time": 140.00199999994038,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.711177141818888,
+          1.0554740097982096,
+          0.2594422279117856
+        ]
+      },
+      {
+        "time": 141.00199999994516,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.000741103712549,
+          1.1375178374203558,
+          0.2832813046644504
+        ]
+      },
+      {
+        "time": 142.00199999994993,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.288346280590527,
+          1.2237271115173345,
+          0.28720031120502504
+        ]
+      },
+      {
+        "time": 143.0019999999547,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.535352320316957,
+          1.2957883795299594,
+          0.26819882788782073
+        ]
+      },
+      {
+        "time": 144.00199999995948,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.675701178860631,
+          1.3311085076799059,
+          0.2482474471445178
+        ]
+      },
+      {
+        "time": 145.00199999996426,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.679975979448477,
+          1.3310283174476438,
+          0.26219051380864017
+        ]
+      },
+      {
+        "time": 146.00199999996903,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.645639493801213,
+          1.3085889738361434,
+          0.4222813638807044
+        ]
+      },
+      {
+        "time": 147.0019999999738,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.651655034937861,
+          1.3082374967061223,
+          0.745527402442475
+        ]
+      },
+      {
+        "time": 148.00199999997858,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.659353398596993,
+          1.308996951433404,
+          1.054204645202999
+        ]
+      },
+      {
+        "time": 149.00199999998335,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.6669992267831635,
+          1.311529553862602,
+          1.3577628504306136
+        ]
+      },
+      {
+        "time": 150.00199999998813,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.673683270530029,
+          1.31581054117192,
+          1.6601526544490381
+        ]
+      },
+      {
+        "time": 151.0019999999929,
+        "detections": 5,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.67900746740547,
+          1.3218709384979423,
+          1.9610918708558907
+        ]
+      },
+      {
+        "time": 152.00199999999768,
+        "detections": 5,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.682355783637105,
+          1.3292360194213142,
+          2.261435465315769
+        ]
+      },
+      {
+        "time": 153.00000000000244,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.683523003035175,
+          1.3372197969242265,
+          2.561031563157939
+        ]
+      },
+      {
+        "time": 154.00000000000722,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.682155767084354,
+          1.3452422930170211,
+          2.8610765403687797
+        ]
+      },
+      {
+        "time": 155.000000000012,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.647307315443808,
+          1.3553514587877344,
+          -3.09848505895414
+        ]
+      },
+      {
+        "time": 156.00000000001677,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.3991005538757335,
+          1.3092466097923396,
+          -2.925444681803382
+        ]
+      },
+      {
+        "time": 157.00000000002154,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          5.106895153350167,
+          1.2356875591951535,
+          -2.8818784725136846
+        ]
+      },
+      {
+        "time": 158.00000000002632,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.818942576097775,
+          1.1514938671524868,
+          -2.8628779053743068
+        ]
+      },
+      {
+        "time": 159.0000000000311,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.532485427189055,
+          1.0636395758896162,
+          -2.8649438611483773
+        ]
+      },
+      {
+        "time": 160.00000000003587,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.272809079967211,
+          0.9882930807770607,
+          -2.889339264820987
+        ]
+      },
+      {
+        "time": 161.00000000004064,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.111945041450854,
+          0.9482216455223142,
+          -2.912766722347464
+        ]
+      },
+      {
+        "time": 162.00000000004542,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.018048440693462,
+          0.9301461706190651,
+          -2.9110995774987902
+        ]
+      },
+      {
+        "time": 163.0000000000502,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.021089111056549,
+          0.9185601108492708,
+          3.0443817910732696
+        ]
+      },
+      {
+        "time": 164.00000000005497,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.020845311502521,
+          0.921462492002038,
+          2.7405790600842685
+        ]
+      },
+      {
+        "time": 165.00000000005974,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.021026255198553,
+          0.9247246721448423,
+          2.4375006645475183
+        ]
+      },
+      {
+        "time": 166.00000000006452,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.021831701447711,
+          0.9276065998106433,
+          2.1362409202835715
+        ]
+      },
+      {
+        "time": 167.0000000000693,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.0234042589328265,
+          0.9300838994667383,
+          1.8357636745045671
+        ]
+      },
+      {
+        "time": 168.00000000007407,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.0043676449922625,
+          1.1038412624037763,
+          1.6259453616022708
+        ]
+      },
+      {
+        "time": 169.00000000007884,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.9943985615650353,
+          1.3970040821946321,
+          1.5881480850319432
+        ]
+      },
+      {
+        "time": 170.00000000008362,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.988351499488826,
+          1.6043886826247795,
+          1.564711954435657
+        ]
+      },
+      {
+        "time": 171.0000000000884,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.984656972864614,
+          1.7699560539395849,
+          1.538030148663868
+        ]
+      },
+      {
+        "time": 172.00000000009317,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.989474027220801,
+          2.0075257337135817,
+          1.5434583946949434
+        ]
+      },
+      {
+        "time": 173.00000000009794,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.991485247321803,
+          2.305452530373287,
+          1.5349444569092563
+        ]
+      },
+      {
+        "time": 174.00000000010272,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          3.998245756427184,
+          2.5183653281843377,
+          1.555186671562142
+        ]
+      },
+      {
+        "time": 175.0000000001075,
+        "detections": 1,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.0017059778667985,
+          2.6215233014856327,
+          1.5894310800823983
+        ]
+      },
+      {
+        "time": 176.00000000011227,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.017748257158161,
+          2.6342044087685124,
+          1.96083866853575
+        ]
+      },
+      {
+        "time": 177.00000000011704,
+        "detections": 2,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.019621176263744,
+          2.6408401158651076,
+          2.2798691335785812
+        ]
+      },
+      {
+        "time": 178.00000000012182,
+        "detections": 3,
+        "confirmed_tracks": 7,
+        "map_records_updated": 7,
+        "robot_pose": [
+          4.018792616865012,
+          2.648227769642739,
+          2.589843308998236
+        ]
+      },
+      {
+        "time": 179.0000000001266,
+        "detections": 3,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          3.8375420864002825,
+          2.7198097251730142,
+          2.8271260951871002
+        ]
+      },
+      {
+        "time": 180.00000000013137,
+        "detections": 3,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          3.5475906801122723,
+          2.8026315769390835,
+          2.8773788192954646
+        ]
+      },
+      {
+        "time": 181.00000000013614,
+        "detections": 3,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          3.2553733304651136,
+          2.8738513326136763,
+          2.8999210370087183
+        ]
+      },
+      {
+        "time": 182.00000000014091,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          2.963576701081264,
+          2.9387733703552725,
+          2.911570087931196
+        ]
+      },
+      {
+        "time": 183.0000000001457,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          2.6709815566308475,
+          3.000852426683026,
+          2.9172376595641154
+        ]
+      },
+      {
+        "time": 184.00000000015046,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          2.380045563839086,
+          3.0635496089053946,
+          2.9096167746634336
+        ]
+      },
+      {
+        "time": 185.00000000015524,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          2.088420653818403,
+          3.131231364404293,
+          2.9083707544723234
+        ]
+      },
+      {
+        "time": 186.00000000016001,
+        "detections": 1,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.8466800624839115,
+          3.1895410424041937,
+          2.864971931318022
+        ]
+      },
+      {
+        "time": 187.0000000001648,
+        "detections": 1,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.7101793313760614,
+          3.230416205725908,
+          2.845463523194449
+        ]
+      },
+      {
+        "time": 188.00000000016956,
+        "detections": 1,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.6685015945208328,
+          3.22882046913416,
+          2.6125004048933187
+        ]
+      },
+      {
+        "time": 189.00000000017434,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.6238446429360447,
+          3.2741359273494797,
+          2.3078593105142
+        ]
+      },
+      {
+        "time": 190.0000000001791,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.4783321788512411,
+          3.4527595441754757,
+          2.2120672743482017
+        ]
+      },
+      {
+        "time": 191.0000000001839,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.398374807546453,
+          3.569432594080437,
+          2.1460944532623123
+        ]
+      },
+      {
+        "time": 192.00000000018866,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.3894944316859283,
+          3.5984931413482166,
+          2.1985837496209
+        ]
+      },
+      {
+        "time": 193.00000000019344,
+        "detections": 1,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.4129200057582496,
+          3.571920836194218,
+          2.3104920579991903
+        ]
+      },
+      {
+        "time": 194.0000000001982,
+        "detections": 1,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.4272681314666984,
+          3.5779807465443985,
+          2.757294314607011
+        ]
+      },
+      {
+        "time": 195.000000000203,
+        "detections": 0,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.4239147769991722,
+          3.583052520828959,
+          3.0987178774021324
+        ]
+      },
+      {
+        "time": 196.00000000020776,
+        "detections": 0,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.4198656616278658,
+          3.589099810769808,
+          -2.8680503529786647
+        ]
+      },
+      {
+        "time": 197.00000000021254,
+        "detections": 0,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.41412375430986,
+          3.5941743326253475,
+          -2.563579520792356
+        ]
+      },
+      {
+        "time": 198.0000000002173,
+        "detections": 1,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.4070653436800906,
+          3.597430071942509,
+          -2.262056204547303
+        ]
+      },
+      {
+        "time": 199.0000000002221,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.3993109627996778,
+          3.598510771801009,
+          -1.9615267830205168
+        ]
+      },
+      {
+        "time": 200.00000000022686,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.3716315794052798,
+          3.4899039537284877,
+          -1.7149312626317428
+        ]
+      },
+      {
+        "time": 201.00000000023164,
+        "detections": 2,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.3532147525067209,
+          3.356078904212424,
+          -1.6333933691112952
+        ]
+      },
+      {
+        "time": 202.0000000002364,
+        "detections": 1,
+        "confirmed_tracks": 8,
+        "map_records_updated": 8,
+        "robot_pose": [
+          1.350950536740227,
+          3.3137345808008036,
+          -1.6610807226853799
+        ]
+      }
+    ]
+  },
+  "bridge": {
+    "frame_batches": 203,
+    "records_updated": 1332,
+    "online_identities": 8,
+    "new_items": 0,
+    "outside_map_track_samples": 0,
+    "association_events": [
+      {
+        "online_track_id": 1,
+        "map_track_id": 1,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          1.5741066786733005,
+          0.5502002335007922,
+          0.008699618178193414
+        ]
+      },
+      {
+        "online_track_id": 3,
+        "map_track_id": 3,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          5.068416964867203,
+          1.6179534926897305,
+          0.03166009751029273
+        ]
+      },
+      {
+        "online_track_id": 4,
+        "map_track_id": 5,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          6.243200400714665,
+          1.4317421245980648,
+          0.04343368575172863
+        ]
+      },
+      {
+        "online_track_id": 5,
+        "map_track_id": 2,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          5.458121259405858,
+          3.8746565284276273,
+          0.10054391980966892
+        ]
+      },
+      {
+        "online_track_id": 6,
+        "map_track_id": 4,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          4.846549601506384,
+          4.349978286693602,
+          0.12489739631946281
+        ]
+      },
+      {
+        "online_track_id": 7,
+        "map_track_id": 9,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          1.4292832417432728,
+          5.134185349690487,
+          0.10523494594300967
+        ]
+      },
+      {
+        "online_track_id": 10,
+        "map_track_id": 12,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          1.256174343550504,
+          2.7079818210334787,
+          0.11382624501130534
+        ]
+      },
+      {
+        "online_track_id": 13,
+        "map_track_id": 10,
+        "association": "matched_prior_or_existing_map_record",
+        "position": [
+          1.025092099681581,
+          4.008342556856988,
+          0.0685750302808669
+        ]
+      }
+    ],
+    "run_id": "stage6-live-0-1791869306226946546"
+  }
+}

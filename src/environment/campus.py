@@ -120,10 +120,13 @@ def build_campus(
     litter_count=8,
     distractor_count=10,
     vary_lighting=True,
+    cleaning_tools=False,
 ):
     """
     Everything random (litter, distractors, lighting) comes
     from `seed`, so a seed always gives the same scene.
+
+    cleaning_tools adds the visual-only Stage 7 nozzle and hopper.
     """
 
     layout = layout or default_layout()
@@ -137,6 +140,9 @@ def build_campus(
     spec.modelname = "cleanquad_campus"
 
     add_head_camera(spec)
+    if cleaning_tools:
+        from src.manipulation.tools import add_cleaning_tools
+        add_cleaning_tools(spec)
     add_terrain(spec, layout, *lighting)
     add_objects(spec, layout)
     add_litter(spec, litter)

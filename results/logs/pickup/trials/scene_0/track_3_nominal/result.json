@@ -1,0 +1,223 @@
+{
+  "scene_seed": 0,
+  "track_id": 3,
+  "class": "bottle",
+  "zone": "road",
+  "perturbation": "nominal",
+  "belief_source": "saved Stage 4 CNN depth tracks",
+  "belief_error_m": 0.027332376152412487,
+  "target": "litter_bottle_00",
+  "status": "captured_unverified",
+  "success": true,
+  "wrong_captures": [],
+  "attempts": 1,
+  "dock_error_m": 0.012912389891897504,
+  "tip_to_target_m": 0.00518553454332524,
+  "tip_ground_clearance_m": 0.03443792067613402,
+  "max_pitch_deg": 15.84101022859254,
+  "min_trunk_height_m": 0.2135988409358353,
+  "simulated_seconds": 14.74200000000176,
+  "wall_seconds": 2.7397257089978666,
+  "skill": {
+    "status": "captured_unverified",
+    "success": true,
+    "captured": [
+      "litter_bottle_00"
+    ],
+    "attempts": [
+      {
+        "attempt": 1,
+        "belief": [
+          5.068406491428898,
+          1.620294457709825,
+          0.032974675394302884
+        ],
+        "dock_target": [
+          5.013513515029061,
+          1.3815231002525978
+        ],
+        "dock_heading_rad": 1.3448251390075505,
+        "dock": {
+          "track_id": 0,
+          "status": "success",
+          "success": true,
+          "simulated_seconds": 5.893999999999518,
+          "wall_seconds": 1.297331708999991,
+          "goal_position": [
+            5.013513515029061,
+            1.3815231002525978
+          ],
+          "goal_yaw_rad": 1.3448251390075505,
+          "planned_standoff_m": 0.0,
+          "planned_length_m": 0.3032636119014199,
+          "waypoints": [
+            [
+              4.841233770205908,
+              1.1319464430364945
+            ],
+            [
+              5.013513515029061,
+              1.3815231002525978
+            ]
+          ],
+          "final_pose": [
+            5.0234849247493125,
+            1.3733193937176682,
+            1.27411133597433
+          ],
+          "final_position_error_m": 0.012912389891897504,
+          "final_heading_error_deg": 4.051602467122953,
+          "final_speed_m_s": 0.00016205730025748127,
+          "min_grid_clearance_m": 0.5220411802996434,
+          "max_projected_robot_radius_m": 0.3869225885394751,
+          "max_roll_deg": 2.8002752999827756,
+          "max_pitch_deg": 2.1154379072083747,
+          "collision_geoms": [],
+          "collision_examples": [],
+          "support_transition_contact_samples": 0,
+          "support_transition_examples": [],
+          "shield_interventions": 0,
+          "replanning_events": [],
+          "live_goal_updates": [],
+          "controller": "line follower",
+          "ppo_inference_calls": 0,
+          "reset_before_route": false,
+          "follower_config": {
+            "forward_speed": 0.3,
+            "near_speed": 0.1,
+            "yaw_rate": 0.3,
+            "waypoint_tolerance": 0.04,
+            "goal_tolerance": 0.08,
+            "start_turn": 0.20943951023931956,
+            "stop_turn": 0.05235987755982989,
+            "heading_tolerance": 0.10471975511965978
+          },
+          "control_hz": 10.0,
+          "start_pose": [
+            4.841233770205908,
+            1.1319464430364945,
+            1.136972497058066
+          ],
+          "label": "dock"
+        },
+        "dock_error_m": 0.012912389891897504,
+        "action": {
+          "tip_at_suction": [
+            5.097350863224159,
+            1.6236338262035208,
+            0.03443792067613402
+          ],
+          "tip_ground_clearance_m": 0.03443792067613402,
+          "nearest_litter_error_m": 0.00518553454332524,
+          "suction": {
+            "status": "captured",
+            "captured": [
+              "litter_bottle_00"
+            ],
+            "distractors_in_zone": []
+          },
+          "status": "success",
+          "lower": {
+            "max_pitch_deg": 15.84101022859254,
+            "max_roll_deg": 0.5228975256165034,
+            "min_trunk_height_m": 0.2135988409358353
+          },
+          "raise": {
+            "max_pitch_deg": 15.611050159423908,
+            "max_roll_deg": 0.5026021677905721,
+            "min_trunk_height_m": 0.21459510591349606
+          }
+        },
+        "back_off": {
+          "track_id": 0,
+          "status": "success",
+          "success": true,
+          "simulated_seconds": 5.048000000001686,
+          "wall_seconds": 1.1081638139985444,
+          "goal_position": [
+            4.841233770205908,
+            1.1319464430364945
+          ],
+          "goal_yaw_rad": 1.135385628768231,
+          "planned_standoff_m": 0.0,
+          "planned_length_m": 0.30323734425786275,
+          "waypoints": [
+            [
+              5.0240365868937795,
+              1.3738886203507072
+            ],
+            [
+              4.841233770205908,
+              1.1319464430364945
+            ]
+          ],
+          "final_pose": [
+            4.874599937195247,
+            1.1291963616802028,
+            1.0456832861177228
+          ],
+          "final_position_error_m": 0.033479307744137515,
+          "final_heading_error_deg": 5.139565646310462,
+          "final_speed_m_s": 0.00019523184259422806,
+          "min_grid_clearance_m": 0.5253887361980547,
+          "max_projected_robot_radius_m": 0.3872468687375371,
+          "max_roll_deg": 2.9494783332551497,
+          "max_pitch_deg": 2.6830701577211005,
+          "collision_geoms": [],
+          "collision_examples": [],
+          "support_transition_contact_samples": 0,
+          "support_transition_examples": [],
+          "shield_interventions": 0,
+          "replanning_events": [],
+          "live_goal_updates": [],
+          "controller": "line follower",
+          "ppo_inference_calls": 0,
+          "reset_before_route": false,
+          "follower_config": {
+            "forward_speed": 0.3,
+            "near_speed": 0.1,
+            "yaw_rate": 0.3,
+            "waypoint_tolerance": 0.04,
+            "goal_tolerance": 0.08,
+            "start_turn": 0.20943951023931956,
+            "stop_turn": 0.05235987755982989,
+            "heading_tolerance": 0.10471975511965978
+          },
+          "control_hz": 10.0,
+          "start_pose": [
+            5.0240365868937795,
+            1.3738886203507072,
+            1.2786221924566414
+          ],
+          "label": "back_off"
+        }
+      }
+    ],
+    "approach_pose": [
+      4.841233770205908,
+      1.1319464430364945,
+      1.136972497058066
+    ],
+    "config": {
+      "dock_offset": 0.245,
+      "dock_speed": 0.12,
+      "dock_tolerance": 0.025,
+      "dock_time": 25.0,
+      "capture_radius": 0.07,
+      "max_tip_height": 0.1,
+      "pickup": {
+        "front_height": -0.17,
+        "rear_height": -0.27
+      },
+      "stand": {
+        "front_height": -0.3,
+        "rear_height": -0.3
+      },
+      "lower_seconds": 1.2,
+      "hold_seconds": 0.8,
+      "raise_seconds": 1.2,
+      "settle_seconds": 0.6,
+      "attempts": 3
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "seed": 0,
+  "run_id": "stage6-live-0-1791869306226946546",
+  "rows": 60,
+  "columns": 80,
+  "resolution_m": 0.1,
+  "items": 8,
+  "active_items": 8,
+  "collected_items": 0,
+  "terrain_cells": {
+    "curb": 68,
+    "entrance": 128,
+    "grass": 1300,
+    "obstacle": 68,
+    "pavement": 948,
+    "planter": 56,
+    "plaza": 604,
+    "ramp": 48,
+    "road": 1484,
+    "stairs": 96
+  },
+  "layer_cells": {
+    "occupancy": 92,
+    "forbidden": 484,
+    "boundary": 276,
+    "traversable": 4036,
+    "clearance_blocked": 764
+  }
+}

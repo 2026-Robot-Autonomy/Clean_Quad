@@ -206,7 +206,13 @@ to minimize the original terrain-weighted grid cost.
         return RoutePlan(tuple(points), tuple(cells), sum(p.grid_cost for p in sections),
                          sum(p.length for p in sections))
 
-    def approach_item(self, start, item):
+    def approach_item(self, start, item, *, dock_offset=None):
+        """Approach pose facing the item.
+
+        With dock_offset, the pose must also leave a padded-free straight line
+        to the dock point, dock_offset short of the item, so a pickup tool
+        mounted ahead of the trunk centre can be driven over the litter.
+        """
         if item.get("collected", False):
             raise NoPathError("item has already been collected")
         source = self.grid.world_to_cell(*start)
@@ -229,6 +235,10 @@ to minimize the original terrain-weighted grid cost.
                 continue
             if not self.segment_is_free(position, target, raw=True):
                 continue
+            if dock_offset is not None:
+                dock = dock_point(position, target, dock_offset)
+                if not self.segment_is_free(position, dock):
+                    continue
             score = cost + 2.0 * abs(standoff - self.config.approach_preferred)
             candidates.append((score, cell, position, standoff))
         for _, _, position, standoff in sorted(candidates):
@@ -239,3 +249,47 @@ to minimize the original terrain-weighted grid cost.
             yaw = math.atan2(target[1] - position[1], target[0] - position[0])
             return ApproachPlan(item["track_id"], position, yaw, standoff, route)
         raise NoPathError("no reachable litter approach pose within the standoff range")
+
+    def approach_bin(self, start, bin_landmark, *, margin=0.05, band=0.25):
+        """Pose facing a circular bin from just outside the padded obstacle.
+
+        bin_landmark is a map landmark record with a Circle shape. The line of
+        sight to the bin rim must be raw-free and on the same surface height.
+        """
+        shape = bin_landmark["shape"]
+        centre, radius = (shape["x"], shape["y"]), shape["r"]
+        source = self.grid.world_to_cell(*start)
+        if self.blocked[source]:
+            raise NoPathError("start is blocked after robot-clearance padding")
+        nearest = radius + self.config.clearance_radius + margin
+        distance, _ = self._search(source)
+        candidates = []
+        for cell, cost in distance.items():
+            position = self.grid.cell_center(*cell)
+            standoff = math.dist(position, centre)
+            if not nearest <= standoff <= nearest + band:
+                continue
+            rim = dock_point(position, centre, radius + 2 * self.grid.resolution)
+            if not self.segment_is_free(position, rim, raw=True):
+                continue
+            rim_cell = self.grid.world_to_cell(*rim)
+            if abs(self.map.layers["height"][cell] - self.map.layers["height"][rim_cell]) > 0.025:
+                continue
+            candidates.append((cost + 2.0 * (standoff - nearest), position, standoff))
+        for _, position, standoff in sorted(candidates):
+            try:
+                route = self.plan(start, position)
+            except NoPathError:
+                continue
+            yaw = math.atan2(centre[1] - position[1], centre[0] - position[0])
+            return ApproachPlan(0, position, yaw, standoff, route)
+        raise NoPathError(f"no reachable approach pose for {bin_landmark['name']}")
+
+
+def dock_point(position, target, offset):
+    """Point `offset` metres short of target on the line from position."""
+    dx, dy = target[0] - position[0], target[1] - position[1]
+    length = math.hypot(dx, dy)
+    if length < 1e-9:
+        raise ValueError("dock direction is undefined")
+    return (target[0] - offset * dx / length, target[1] - offset * dy / length)

@@ -65,3 +65,22 @@ Use `best.zip` for deployment; the last training update is `final.zip` and the
 supervised initializer is `imitation.zip`. The final report includes the exact
 split comparison commands used for its recorded results. The RL environments
 are fast 2-D abstractions; MuJoCo supplies the independent robot-physics checks.
+
+Stages 7 and 8 are implemented and verified on scene 0. **Stage 7 (pickup):** a
+visual suction nozzle under the head and a back hopper; the robot docks with
+the nozzle over the item, crouches nose-down, applies suction, backs off and
+confirms with the camera that the item is gone before marking it collected.
+52/52 headless pickup trials over three scenes captured the target on the first
+attempt. **Stage 8 (task planning):** an exact dynamic-programming task planner
+chooses the next item from distance, terrain risk and class priority, empties a
+3-item hopper into the campus bins and returns to the base pad to charge a
+simulated battery. Both live missions collect all 7 reachable items, dump them
+into a bin and return to base; Stage 8 also rejects two false online detections.
+All 118 regression tests pass. See the [Stage 7/8 report](docs/STAGE_7_8_REPORT.md).
+
+```bash
+python -B experiments/33_pickup_trials.py --require-pass
+python -B experiments/34_cleaning_mission.py --mode stage7 --require-pass
+python -B experiments/34_cleaning_mission.py --mode stage8 --require-pass --viewer
+python -B experiments/35_stage7_8_report.py
+```

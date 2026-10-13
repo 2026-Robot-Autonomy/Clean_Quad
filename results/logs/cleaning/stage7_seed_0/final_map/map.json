@@ -1,0 +1,605 @@
+{
+  "schema_version": 1,
+  "units": "metres",
+  "frame": "mujoco_world_xyz_z_up",
+  "axis_order": "row_y_north_column_x_east",
+  "bounds": "half_open",
+  "boundary_policy": "nontraversable_perimeter_cell_ring",
+  "grid": {
+    "width": 8.0,
+    "depth": 6.0,
+    "resolution": 0.1,
+    "origin": [
+      0.0,
+      0.0
+    ]
+  },
+  "seed": 0,
+  "run_id": "stage7-mission-0-1791871544071629506",
+  "clearance_radius_m": 0.0,
+  "provenance": {
+    "prior_map_run_id": "stage4:9d38103d3012a6ae8761e877f56764ef67f79590c8ff201ac0913658999923c7",
+    "prior_map_provenance": {
+      "stage4_run": {
+        "seed": 0,
+        "detector": "YOLOv8n (CNN)",
+        "device": "cpu",
+        "oracle_boxes_diagnostic": false,
+        "model": "models/litter_yolov8n.pt",
+        "model_sha256": "cf611589fb7faf97f49b96bf152beb7b3db985ec7effe03a85f672b285ab6301",
+        "config": {
+          "min_score": 0.38000000000000006,
+          "min_depth": 0.05,
+          "max_range": 8.0,
+          "min_depth_pixels": 9,
+          "depth_crop": 0.6,
+          "max_extent": 0.35,
+          "ground_z": 0.0
+        },
+        "versions": {
+          "python": "3.13.15",
+          "numpy": "2.5.3",
+          "mujoco": "3.14.0",
+          "matplotlib": "3.11.2",
+          "scipy": "1.18.1",
+          "torch": "2.14.1+cpu",
+          "torchvision": "0.29.1+cpu",
+          "ultralytics": "8.4.175"
+        },
+        "route": {
+          "seed": 0,
+          "waypoints_reached": 9,
+          "waypoints_total": 9,
+          "completed": true,
+          "fall": false,
+          "simulation_seconds": 63.41200000003153,
+          "frames": 318,
+          "wall_seconds": 226.453721556,
+          "detector_seconds": 41.29527345100004,
+          "camera_rate_hz": 5.0,
+          "viewer_enabled": false
+        },
+        "methods": {
+          "depth": {
+            "association_radius_m": 0.2,
+            "class_switch_radius_m": 0.08,
+            "association_window_s": 1.0,
+            "confirmation": "winning_class_frames",
+            "min_observations": 3
+          },
+          "ground_plane": {
+            "association_radius_m": 0.2,
+            "class_switch_radius_m": 0.08,
+            "association_window_s": 1.0,
+            "confirmation": "winning_class_frames",
+            "min_observations": 3
+          }
+        }
+      },
+      "track_metadata": {
+        "schema_version": 1,
+        "units": "metres",
+        "frame": "mujoco_world_xyz_z_up",
+        "seed": 0,
+        "detector": "YOLOv8n (CNN)",
+        "method": "depth",
+        "config": {
+          "min_score": 0.38000000000000006,
+          "min_depth": 0.05,
+          "max_range": 8.0,
+          "min_depth_pixels": 9,
+          "depth_crop": 0.6,
+          "max_extent": 0.35,
+          "ground_z": 0.0
+        },
+        "association_radius_m": 0.2,
+        "class_switch_radius_m": 0.08,
+        "association_window_s": 1.0,
+        "confirmation": "winning_class_frames",
+        "min_observations": 3
+      },
+      "source": {
+        "tracks_path": "/mnt/c/Users/ariji/Downloads/Robot Autonomy/Robot-Autonomy/results/logs/localization/cnn/seed_0/depth/tracks.json",
+        "run_path": "/mnt/c/Users/ariji/Downloads/Robot Autonomy/Robot-Autonomy/results/logs/localization/cnn/seed_0/run.json",
+        "tracks_sha256": "c1b8cb67986313cd47dd1440094b4601e46f86f08c33f5e5498a004db8358800",
+        "run_sha256": "155b4b3a070c6f51c383e2765d0fcbe5d38ba68ade0a3d0a830dd63ed3d17a3e",
+        "tracks_snapshot": "stage4_tracks.json",
+        "run_snapshot": "stage4_run.json"
+      }
+    },
+    "identity_policy": "explicit prior-map import, then online spatial/class reconciliation"
+  },
+  "landmarks": {
+    "base_pose": [
+      0.8,
+      1.0,
+      0.0
+    ],
+    "bins": [
+      {
+        "name": "bin_1",
+        "kind": "bin",
+        "shape": {
+          "x": 7.4,
+          "y": 2.6,
+          "r": 0.18
+        },
+        "height": 0.5,
+        "shape_type": "Circle"
+      },
+      {
+        "name": "bin_2",
+        "kind": "bin",
+        "shape": {
+          "x": 7.4,
+          "y": 3.9,
+          "r": 0.18
+        },
+        "height": 0.5,
+        "shape_type": "Circle"
+      }
+    ],
+    "ramp": {
+      "kind": "ramp",
+      "x0": 3.4,
+      "x1": 4.6,
+      "y_bottom": 1.5730778166569475,
+      "z_bottom": 0.0,
+      "z_top": 0.06,
+      "slope_deg": 8.0,
+      "friction": 1.0
+    },
+    "layout": {
+      "width": 8.0,
+      "depth": 6.0,
+      "surfaces": [
+        {
+          "kind": "entrance",
+          "rect": {
+            "x0": 5.8,
+            "y0": 5.199999999999999,
+            "x1": 7.4,
+            "y1": 6.0
+          },
+          "height": 0.3,
+          "friction": 1.0
+        },
+        {
+          "kind": "planter",
+          "rect": {
+            "x0": 2.0,
+            "y0": 3.8,
+            "x1": 3.4,
+            "y1": 4.2
+          },
+          "height": 0.12,
+          "friction": 0.6
+        },
+        {
+          "kind": "road",
+          "rect": {
+            "x0": 0.0,
+            "y0": 0.0,
+            "x1": 8.0,
+            "y1": 2.0
+          },
+          "height": 0.0,
+          "friction": 1.0
+        },
+        {
+          "kind": "pavement",
+          "rect": {
+            "x0": 0.0,
+            "y0": 2.0,
+            "x1": 8.0,
+            "y1": 3.2
+          },
+          "height": 0.06,
+          "friction": 1.0
+        },
+        {
+          "kind": "grass",
+          "rect": {
+            "x0": 0.0,
+            "y0": 3.2,
+            "x1": 5.0,
+            "y1": 6.0
+          },
+          "height": 0.06,
+          "friction": 0.6
+        },
+        {
+          "kind": "plaza",
+          "rect": {
+            "x0": 5.0,
+            "y0": 3.2,
+            "x1": 8.0,
+            "y1": 6.0
+          },
+          "height": 0.06,
+          "friction": 1.0
+        }
+      ],
+      "ramp": {
+        "kind": "ramp",
+        "x0": 3.4,
+        "x1": 4.6,
+        "y_bottom": 1.5730778166569475,
+        "z_bottom": 0.0,
+        "z_top": 0.06,
+        "slope_deg": 8.0,
+        "friction": 1.0
+      },
+      "stairs": {
+        "kind": "stairs",
+        "x0": 5.8,
+        "x1": 7.4,
+        "y0": 4.6,
+        "base_height": 0.06,
+        "count": 3,
+        "rise": 0.06,
+        "depth": 0.2,
+        "friction": 1.0
+      },
+      "obstacles": [
+        {
+          "name": "obstacle_tree",
+          "kind": "tree",
+          "shape": {
+            "x": 1.0,
+            "y": 5.0,
+            "r": 0.15
+          },
+          "height": 1.2,
+          "shape_type": "Circle"
+        },
+        {
+          "name": "obstacle_bench",
+          "kind": "bench",
+          "shape": {
+            "x0": 3.4,
+            "y0": 5.1,
+            "x1": 4.4,
+            "y1": 5.45
+          },
+          "height": 0.45,
+          "shape_type": "Rect"
+        },
+        {
+          "name": "obstacle_pole",
+          "kind": "pole",
+          "shape": {
+            "x": 5.4,
+            "y": 2.7,
+            "r": 0.06
+          },
+          "height": 2.0,
+          "shape_type": "Circle"
+        },
+        {
+          "name": "bin_1",
+          "kind": "bin",
+          "shape": {
+            "x": 7.4,
+            "y": 2.6,
+            "r": 0.18
+          },
+          "height": 0.5,
+          "shape_type": "Circle"
+        },
+        {
+          "name": "bin_2",
+          "kind": "bin",
+          "shape": {
+            "x": 7.4,
+            "y": 3.9,
+            "r": 0.18
+          },
+          "height": 0.5,
+          "shape_type": "Circle"
+        }
+      ],
+      "base_pose": [
+        0.8,
+        1.0,
+        0.0
+      ],
+      "curb_y": 2.0,
+      "curb_height": 0.06,
+      "curb_band": 0.05,
+      "wall_height": 0.4,
+      "wall_thickness": 0.1,
+      "traversable": {
+        "road": true,
+        "pavement": true,
+        "plaza": true,
+        "grass": true,
+        "ramp": true,
+        "curb": false,
+        "planter": false,
+        "stairs": false,
+        "entrance": false,
+        "obstacle": false,
+        "outside": false
+      }
+    }
+  },
+  "layers_sha256": "2cfc5e9365da2677fb183184afecc79e0e8f396fdc219502e5fb65336d31aeb9",
+  "items": [
+    {
+      "track": {
+        "track_id": 1,
+        "class_id": 3,
+        "class": "wrapper",
+        "position": [
+          1.583114124192834,
+          0.5494476065752392,
+          0.00831456648538255
+        ],
+        "position_std": [
+          0.01566832195256625,
+          0.005071120405600128,
+          0.0013091616567665139
+        ],
+        "observations": 14,
+        "mean_score": 0.8823218601090568,
+        "class_observations": 14,
+        "max_score": 0.9718489050865173,
+        "first_seen": 0.0,
+        "last_seen": 11.218000000000416,
+        "class_confidence": 1.0,
+        "class_evidence": {
+          "wrapper": 12.352506041526794
+        },
+        "online_track_id": 1,
+        "online_run_id": "stage7-mission-0-1791871544071629506"
+      },
+      "collected": true,
+      "cell": [
+        5,
+        15
+      ]
+    },
+    {
+      "track": {
+        "track_id": 2,
+        "class_id": 0,
+        "class": "bottle",
+        "position": [
+          5.465928558524534,
+          3.886267323445016,
+          0.10423463330525821
+        ],
+        "position_std": [
+          0.032597512838016075,
+          0.019425139499336903,
+          0.00749886651910009
+        ],
+        "observations": 33,
+        "mean_score": 0.9285316106044885,
+        "class_observations": 33,
+        "max_score": 0.9869070053100586,
+        "first_seen": 20.921999999999283,
+        "last_seen": 59.30800000002652,
+        "class_confidence": 1.0,
+        "class_evidence": {
+          "bottle": 30.64154314994812
+        },
+        "online_track_id": 5,
+        "online_run_id": "stage7-mission-0-1791871544071629506"
+      },
+      "collected": true,
+      "cell": [
+        38,
+        54
+      ]
+    },
+    {
+      "track": {
+        "track_id": 3,
+        "class_id": 0,
+        "class": "bottle",
+        "position": [
+          5.066620041567128,
+          1.6022021131695248,
+          0.03904430662709863
+        ],
+        "position_std": [
+          0.016127151279685267,
+          0.025654739334861298,
+          0.008953845621878084
+        ],
+        "observations": 61,
+        "mean_score": 0.8847067781159135,
+        "class_observations": 59,
+        "max_score": 0.9937200546264648,
+        "first_seen": 0.0,
+        "last_seen": 109.94799999992516,
+        "class_confidence": 0.976850217950651,
+        "class_evidence": {
+          "bottle": 52.71778655052185,
+          "can": 1.249326914548874
+        },
+        "online_track_id": 3,
+        "online_run_id": "stage7-mission-0-1791871544071629506"
+      },
+      "collected": true,
+      "cell": [
+        16,
+        50
+      ]
+    },
+    {
+      "track": {
+        "track_id": 4,
+        "class_id": 1,
+        "class": "can",
+        "position": [
+          4.848095918393031,
+          4.350636789485341,
+          0.12973859080592562
+        ],
+        "position_std": [
+          0.0065502432801281835,
+          0.0057238659622082695,
+          0.012155813482048198
+        ],
+        "observations": 64,
+        "mean_score": 0.9265093859285116,
+        "class_observations": 64,
+        "max_score": 0.9840481281280518,
+        "first_seen": 32.9439999999943,
+        "last_seen": 155.7780000000157,
+        "class_confidence": 1.0,
+        "class_evidence": {
+          "can": 59.296600699424744
+        },
+        "online_track_id": 6,
+        "online_run_id": "stage7-mission-0-1791871544071629506"
+      },
+      "collected": true,
+      "cell": [
+        43,
+        48
+      ]
+    },
+    {
+      "track": {
+        "track_id": 5,
+        "class_id": 1,
+        "class": "can",
+        "position": [
+          6.247633609335995,
+          1.4299581297400534,
+          0.047807469760071566
+        ],
+        "position_std": [
+          0.0191194977922891,
+          0.011556254870158818,
+          0.00912635347710993
+        ],
+        "observations": 79,
+        "mean_score": 0.8452050142650362,
+        "class_observations": 79,
+        "max_score": 0.9859046339988708,
+        "first_seen": 0.0,
+        "last_seen": 205.16400000025152,
+        "class_confidence": 1.0,
+        "class_evidence": {
+          "can": 66.77119612693787
+        },
+        "online_track_id": 4,
+        "online_run_id": "stage7-mission-0-1791871544071629506"
+      },
+      "collected": true,
+      "cell": [
+        14,
+        62
+      ]
+    },
+    {
+      "track": {
+        "track_id": 9,
+        "class_id": 2,
+        "class": "cup",
+        "position": [
+          1.428206229279614,
+          5.140237701382033,
+          0.10932716109392662
+        ],
+        "position_std": [
+          0.015341683940510102,
+          0.012546757855048501,
+          0.0029585568049052802
+        ],
+        "observations": 60,
+        "mean_score": 0.8199076841274897,
+        "class_observations": 56,
+        "max_score": 0.949026346206665,
+        "first_seen": 35.94399999999796,
+        "last_seen": 387.33600000112136,
+        "class_confidence": 0.9624715800589251,
+        "class_evidence": {
+          "bottle": 1.8461903929710388,
+          "cup": 47.348270654678345
+        },
+        "online_track_id": 7,
+        "online_run_id": "stage7-mission-0-1791871544071629506"
+      },
+      "collected": false,
+      "cell": [
+        51,
+        14
+      ]
+    },
+    {
+      "track": {
+        "track_id": 10,
+        "class_id": 3,
+        "class": "wrapper",
+        "position": [
+          1.0045852358228746,
+          4.020017164044056,
+          0.06835558233674124
+        ],
+        "position_std": [
+          0.019362736524475302,
+          0.01680892758638286,
+          0.000695482479633179
+        ],
+        "observations": 26,
+        "mean_score": 0.8822456483657544,
+        "class_observations": 26,
+        "max_score": 0.9803704023361206,
+        "first_seen": 243.51000000043462,
+        "last_seen": 266.57600000054475,
+        "class_confidence": 1.0,
+        "class_evidence": {
+          "wrapper": 22.938386857509613
+        },
+        "online_track_id": 12,
+        "online_run_id": "stage7-mission-0-1791871544071629506"
+      },
+      "collected": true,
+      "cell": [
+        40,
+        10
+      ]
+    },
+    {
+      "track": {
+        "track_id": 12,
+        "class_id": 2,
+        "class": "cup",
+        "position": [
+          1.237151655637411,
+          2.7094196448916277,
+          0.12211811493975389
+        ],
+        "position_std": [
+          0.016262064493795882,
+          0.028358454350360187,
+          0.012581140674642912
+        ],
+        "observations": 51,
+        "mean_score": 0.9202259159555622,
+        "class_observations": 47,
+        "max_score": 0.9799812436103821,
+        "first_seen": 77.71800000000027,
+        "last_seen": 290.78400000066034,
+        "class_confidence": 0.9245844762250757,
+        "class_evidence": {
+          "can": 3.539365291595459,
+          "cup": 43.392156422138214
+        },
+        "online_track_id": 9,
+        "online_run_id": "stage7-mission-0-1791871544071629506"
+      },
+      "collected": true,
+      "cell": [
+        27,
+        12
+      ]
+    }
+  ]
+}
