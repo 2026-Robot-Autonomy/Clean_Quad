@@ -1,6 +1,6 @@
 # CleanQuad — PPO Navigation for an Autonomous Litter-Collecting Quadruped
 
-> **Course:** Robot Autonomy (2026) · **Group:** group-XX
+> **Course:** Robot Autonomy (2026) · **Group:** group-10
 
 ---
 
@@ -67,8 +67,8 @@ Training used 1,001,472 PPO transitions per seed (3 seeds) on CPU, with learning
 
 | Sl. No. | Roll No. | Name | GitHub Username | Contribution |
 |:---:|---|---|---|---|
-| 1 | TODO | Arijit Guha | [@ArijitGuha0179](https://github.com/ArijitGuha0179) | Stage 1 locomotion, Stage 4 localization, Stage 5 semantic mapping, Stage 6 navigation |
-| 2 | TODO | Pankaj Giri | [@p-zen07](https://github.com/p-zen07) | Stage 2 campus environment, Stage 3 perception, Stages 7–8 pickup and task planning |
+| 1 | 26AI60R04 | Arijit Guha | [@ArijitGuha0179](https://github.com/ArijitGuha0179) | Stage 1 locomotion, Stage 3 litter detection|
+| 2 | 26AI60R06 | Pankaj Giri | [@p-zen07](https://github.com/p-zen07) | Stage 2 campus environment |
 
 ---
 
