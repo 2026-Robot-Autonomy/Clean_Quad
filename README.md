@@ -70,7 +70,7 @@ Training used 1,001,472 PPO transitions per seed (3 seeds) on CPU, with learning
 | 2 | 26AI60R06 | Pankaj Giri | [@p-zen07](https://github.com/p-zen07) | Stage 2 campus environment |
 | 3 | 26AI60R13 | Asim Aakash | [@asimaakash](https://github.com/asimaakash) | Stage 4 Localization |
 | 4 | 26AI60R24 | Arijit Mondal |[@Arijit123-cpu](https://github.com/Arijit123-cpu) | Stage 5 Semantic mapping, Stage 6 Navigation |
-| 5 | | | | |
+| 5 | 23MI3PE04 | Bhavesh Verma |[@Bhavesh-Verma-git](https://github.com/Bhavesh-Verma-git)| Stages 7–8: Pickup and Task Planning |
  
 
 ---
