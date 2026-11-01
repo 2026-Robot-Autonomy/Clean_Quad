@@ -1,4 +1,41 @@
-.venv-stage4/
+# Python
 __pycache__/
 *.py[cod]
+
+# Virtual environments (including one created in the repository root)
 .venv/
+.venv-*/
+venv/
+/bin/
+/lib/
+/lib64
+/share/
+/pyvenv.cfg
+
+# Generated dataset: rebuild with experiments/22_generate_dataset.py
+/data/
+
+# YOLO base weights (downloaded automatically) and training run output
+/yolov8n.pt
+/models/runs/
+
+# Raw Stage 1 traces: rebuild with experiments 08, 12, 13 and 15
+/results/logs/final_locomotion/
+/results/logs/velocity_tests/
+/results/logs/velocity_validation/
+/results/logs/straight_walk_velocity_control.csv
+
+# MuJoCo runtime log
+MUJOCO_LOG.TXT
+
+# Course README template
+/README_template.md
+
+# Local stage-by-stage study reports
+/report/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
