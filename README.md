@@ -15,7 +15,7 @@
 
 ### Problem Statement
 
-Cleaning a campus needs more than a walking robot. The robot has to recognise litter among look-alike clutter (leaves, stones, sticks), work out where each item is in 3-D, stay on safe terrain across curbs and a ramp, and decide what to do next with a limited hopper and battery. Each stage's errors feed into the next, so the hard part is making the whole chain work in one continuous run rather than making any single component work alone.
+Cleaning a campus needs more than a walking robot. The robot has to recognise litter among look-alike clutter (leaves, stones, sticks), work out where each item is in 3-D, stay on safe terrain across curbs and a ramp, and decide what to do next with a limited hopper and battery. Each stage's errors feed into the next, so the hard part is making the whole chain work in one continuous run rather than making any single component work alone.The idea first occurred to one of the authors, ArijitGuha0179, when he spotted litter in an inaccessible area from his hostel room one day.
 
 ### Approach
 
@@ -319,4 +319,4 @@ None used.
 ---
 
 ## 8. License & Acknowledgements
-This project was done as part of the Robot Autonomy course (2026). The campus layout is inspired by IIT Kharagpur.
+This project was done as part of the Robot Autonomy course (2026). The campus layout is not inspired by IIT Kharagpur but the Idea is to implement it in that scale.
