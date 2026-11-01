@@ -122,13 +122,17 @@ YOLOv8n training over 50 epochs:
 
 ### Simulation Videos
 
-**Stage 8 cleaning mission** (7 min 34 s). Click the image to play the video.
+**Stage 8 cleaning mission:** the whole mission as a short time-lapse, at about 23× speed.
 
-[![Stage 8 cleaning mission: click to play](results/figures/stage8_cleaning_mission_preview.jpg)](results/videos/stage8_cleaning_mission.mp4)
+[![Stage 8 cleaning mission time-lapse](results/videos/stage8_cleaning_mission_preview.gif)](results/videos/stage8_cleaning_mission.mp4?raw=true)
+
+**[Open the full video](results/videos/stage8_cleaning_mission.mp4?raw=true)** (7 min 34 s, 55 MB). It is too large to play on GitHub, so your browser may download it instead.
+
+During charging, the on-screen battery value keeps counting down until it jumps to 100%. This is a display quirk: the logged minimum for the mission is 17.7%.
 
 | Description | Video |
 |---|---|
-| Stage 8 cleaning mission | [results/videos/stage8_cleaning_mission.mp4](results/videos/stage8_cleaning_mission.mp4) |
+| Stage 8 cleaning mission, full video | [results/videos/stage8_cleaning_mission.mp4](results/videos/stage8_cleaning_mission.mp4?raw=true) |
 | Live perception demo, YOLOv8n | [results/videos/perception_demo_cnn.gif](results/videos/perception_demo_cnn.gif) |
 | Live perception demo, colour baseline | [results/videos/perception_demo_color.gif](results/videos/perception_demo_color.gif) |
 
