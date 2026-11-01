@@ -79,31 +79,31 @@ Training used 1,001,472 PPO transitions per seed (3 seeds) on CPU, with learning
 
 Each week covers one stage. Consecutive stages that were smaller or built directly on each other share a week. Dates are the commit dates in the repository history.
 
-### Week 1 — Stage 1: Quadruped Locomotion (committed 5 Oct 2026)
+### Week 1 — Stage 1: Quadruped Locomotion 
 - **Goals:** Make the A1 walk reliably and give later stages one simple velocity command interface.
 - **Work done:** Built the trot gait generator, 3-D leg IK, yaw stabilisation, velocity calibration and `LocomotionInterface(vx, wz)`. The V2 gait passed 16/16 required and 4/4 optional tests with no falls, with speed errors under 2%.
 - **Challenges:** The first gait reached only about 0.03 m/s and could not climb a 1 cm step, so a faster V2 profile was added. V2 still fails on steps of 4 cm or more, so curbs became no-go lines and level changes use an 8° ramp.
 - **Next steps:** Build a campus that respects these terrain limits.
 
-### Week 2 — Stages 2–3: Campus Environment and Litter Perception (committed 8 and 10 Oct 2026)
+### Week 2 — Stages 2–3: Campus Environment and Litter Perception 
 - **Goals:** Create the campus world and detect litter from the robot's own camera.
 - **Work done:** Built a procedural campus with randomized litter and distractors; the robot completed a 9/9-waypoint route with no falls. Generated 4,000 auto-labelled images and trained YOLOv8n and a colour baseline. YOLOv8n reached 0.965 mAP@0.5 on the test set against 0.342 for the baseline.
 - **Challenges:** Raising terrain contact priority slowed the gait, so the terrain keeps MuJoCo's default contact. Blue dustbins are sometimes detected as cans because bins were never labelled as negatives. The detector is trained on renders only, so these numbers do not transfer to a real camera.
 - **Next steps:** Turn 2-D detections into world positions.
 
-### Week 3 — Stages 4–5: 3-D Localization and Semantic Mapping (committed 10 and 11 Oct 2026)
+### Week 3 — Stages 4–5: 3-D Localization and Semantic Mapping 
 - **Goals:** Produce a reliable list of litter positions and combine it with the terrain into a map.
 - **Work done:** Built the depth back-projection and tracking pipeline: 8/8 items, no duplicates or false positives, 3.36 cm mean and 4.92 cm maximum error. Built an 80 × 60 semantic grid with reload support; all 12 acceptance checks passed.
 - **Challenges:** An early route confirmed a duplicate bottle track. It was fixed with recent-position association, a three-frame class confirmation rule and better duplicate suppression. The no-depth flat-ground baseline failed (7/8 items, 12 false positives) because the terrain is not flat. The map was validated offline for one seed only.
 - **Next steps:** Navigate to mapped items, starting with an A* baseline.
 
-### Week 4 — Stage 6: Map Planning and Learned Navigation (committed 12 Oct 2026)
+### Week 4 — Stage 6: Map Planning and Learned Navigation 
 - **Goals:** Reach litter safely with a classical baseline and a learned controller, and compare them in MuJoCo.
 - **Work done:** Built clearance-aware A* and the classical follower, then trained three PPO models for about 1 million transitions each. All 59/59 MuJoCo routes passed. A continuous live mission visited 7/7 reachable targets and returned to base.
 - **Challenges:** One item behind the tree, planter and bench cannot be reached with the 0.45 m safety footprint, and the padding was not reduced to force coverage. Live rendering and detection were expensive on CPU, so the full mission ran the camera at 1 Hz. The live map also kept one unmatched detection.
 - **Next steps:** Add physical pickup and decide the order of work.
 
-### Week 5 — Stages 7–8: Pickup and Task Planning (committed 13 Oct 2026)
+### Week 5 — Stages 7–8: Pickup and Task Planning 
 - **Goals:** Collect items, and plan around hopper capacity and battery.
 - **Work done:** Added a suction nozzle and hopper with camera-verified pickup, which captured 52/52 trials on the first attempt. Added an exact dynamic-program task planner with battery checks and replanning. The planned live mission collected 7/7 reachable items with 3 bin dumps and 1 charging return.
 - **Challenges:** The A1 has no arm and the litter has no physics, so suction is modelled as a capture zone. The nozzle was moved forward to reach an item 0.38 m from a curb. Live capture margin is thin: tip error reached 6.8 cm against a 7 cm radius. Battery handling is greedy, which caused one extra detour.
